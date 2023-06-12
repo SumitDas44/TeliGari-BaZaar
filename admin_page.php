@@ -315,7 +315,7 @@
                 <i class="fas fa-gas-pump"></i>
                 <h3>oil change</h3>
                 <p>Powering Progress, Fuelling your ride!.</p>
-                <a href="#" class="btn">check out</a>
+                <a href="fuels_admin.php" class="btn">check out</a>
             </div>
             <div class="box">
                 <i class="fa-regular fa-user"></i>

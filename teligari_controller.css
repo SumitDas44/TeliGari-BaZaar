@@ -269,6 +269,59 @@ h1{
     color: var(--yellow);
 }
 
+.fuel-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.7rem;
+    background: #fcdcdc;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.fuel-container .fuels {
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    transform: scale(1);
+}
+.fuel-container .fuels img{
+    height: 150px;
+    width: auto;
+}
+.fuel-container .fuels .content h3{
+    font-size: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--black);
+}
+.fuel-container .fuels .content h4{
+    font-size: 1.5rem;
+    color: var(--red);
+}
+.fuel-container .fuels .content .price{
+    font-size: 2.5rem;
+    color: var(--yellow);
+}
+.fuel-container .fuels .content p{
+    font-size: 1.1rem;
+}
+.fuel-container .fuels:hover{
+    transform: scale(1.05);
+    background: var(--change);
+}
+.fuel-container .fuels:hover .price{
+    color: var(--black);
+    font-size: 3.2rem;
+}
+.fuel-container .fuels:hover h3{
+    font-size: 4rem;
+    color: var(--yellow);
+}
+
 .footer{
     background: var(--light-yellow);
 }

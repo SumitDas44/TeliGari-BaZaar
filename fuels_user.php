@@ -17,7 +17,7 @@ if ($result->num_rows > 0) {
 $conn->close();
 
 session_start();
-if(!isset($_SESSION['admin_name'])){
+if(!isset($_SESSION['user_name'])){
     header('location:index.php');
 }
 ?>
@@ -46,22 +46,22 @@ if(!isset($_SESSION['admin_name'])){
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
-    <a href="admin_page.php" class="logo"><span>TeliGari</span>BaZaar</a>
+    <a href="user_page.php" class="logo"><span>TeliGari</span>BaZaar</a>
 
     <nav class="navbar">
-        <a href="admin_page.php#home">home</a>
-        <a href="admin_page.php#vehicles">vehicle</a>
-        <a href="admin_page.php#services">services</a>
-        <a href="admin_page.php#features">features</a>
-        <a href="admin_page.php#reviews">reviews</a>
-        <a href="admin_page.php#contact">contact</a>
+        <a href="user_page.php#home">home</a>
+        <a href="user_page.php#vehicles">vehicle</a>
+        <a href="user_page.php#services">services</a>
+        <a href="user_page.php#features">features</a>
+        <a href="user_page.php#reviews">reviews</a>
+        <a href="user_page.php#contact">contact</a>
     </nav>
     <div id="profile-btn" class="profile-btn-container">
         <div class="btn-wrapper">
         <button class="btn">
             <span>
                 <?php
-                    echo $_SESSION['admin_name'];
+                    echo $_SESSION['user_name'];
                 ?>
             </span>
         </button>
