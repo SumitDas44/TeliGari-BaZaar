@@ -1,0 +1,10 @@
+INSERT INTO battery(name, capacity, price, details, image) VALUES
+    ('Energizer', '74 Amps. 12 Volts', '$260', 'Filled, charged and instantly ready to use, Maintenance-free', 'battery-01.png'),
+    ('Bosch', '35 Amps. 28 Volts', '$75', 'Performance range with Silver alloy technology, Bosch S5 Batteries are powered with advanced silver alloy technology.', 'battery-02.png'),
+    ('Bosch', '45 Amps. 12 Volts', '$80', 'Performance range with Silver alloy technology, Bosch S5 Batteries are powered with advanced silver alloy technology.', 'battery-03.png'),
+    ('Platinum', '70 Amps. 12 Volts', '$175','A brand-new, unused, unopened and undamaged item in original retail packaging.', 'battery-04.png'),
+    ('Super sm', '55 Amps. 12 Volts', '$120', 'Super small car batteries often utilize advanced technologies such as lithium-ion or lithium-polymer chemistry, which offer higher energy density and longer lifespan compared to traditional lead-acid batteries.', 'battery-05.png'),
+    ('DieHard', '30 Amps. 12 Volts', '$60', 'Spill proff, sealed, valve regulated and vibration resistant.', 'battery-06.png'),
+    ('Tudor', '74 Amps. 12 Volts', '$130', 'Tudor car batteries are trusted by car owners and mechanics for their durability, dependability, and ability to provide the necessary power to start the engine and operate the electrical systems of a vehicle.', 'battery-07.png'),
+    ('Panasonic', '49 Amps. 12 Volts', '$95', 'With a focus on longevity and dependability, Panasonic car batteries are a trusted choice for automotive applications. ', 'battery-08.png'),
+    ('Exide', '50 Amps. 12 Volts', '$105', 'Exide car batteries often use lead-acid technology, which has been widely used in the automotive industry for many years.', 'battery-09.png');

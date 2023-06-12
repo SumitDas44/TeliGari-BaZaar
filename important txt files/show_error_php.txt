@@ -1,0 +1,22 @@
+<?php
+
+    @include 'config.php';
+
+    if(isset($_POST["name"])){
+        $data = array(
+            ':email' => $_POST["email"],
+            ':password' => $_POST["password"],
+        );
+        $query = "
+        INSERT INTO data_sample
+        (email, password)
+        VALUES (:email, :password)
+        ";
+
+        $statement = $conn->prepare($query);
+        $statement-> execute($data);
+
+        echo '<span class="error-msg">'.$error.'</span>';
+    }
+
+?>

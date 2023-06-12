@@ -1,0 +1,760 @@
+Car 1:
+
+Nissan GT-R 2023
+Price in USD: $113,540
+
+Full Specification and Features
+*Basic Info
+Model Number GT-R 2023
+Made InJapanese: Hepburn: Nissan Jidōsha Kabushiki-gaisha
+Available Colors Solid Red , Super Silver QuadCoat , Jet Black Pearl , Pearl White Tricoat
+Body Type Coupe
+*Engine 
+Engine Type 3.8L Twin-Turbo V6 Gas
+Engine Power 565 @ 6,800 RPM
+Torque 467 lb-ft @ 3,300 – 5,800 RPM
+No. Of Cylinders 6
+Fuel Type Gasoline 
+Charger Turbocharged
+*Fuel
+Mileage In City14.2 L/100km
+Mileage On Highway10.7 L/100km
+*Capacities
+Seating Capacity 4 passengers
+Fuel Tank Capacity (Litres) 74 l (16 gal)
+No. Of Doors 2 doors
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 2:
+
+Ferrari LaFerrari 2021
+Price in USD: $4,499,998
+
+Full Specification and Features
+*Basic Info
+Model Number LaFerrari 2021
+Made In: Maranello
+Body Type Coupe
+*Engine 
+Engine Type 6.3 L F140 FE V12
+Fuel Type Gasoline 
+Charger Turbocharged
+*Fuel
+Mileage In City 16 L/100km
+Mileage On Highway 22 L/100km
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 3:
+
+Toyota Innova Crysta VX 2.4 8 STR 2023
+Price in USD: $29,150
+
+Full Specification and Features
+*Basic Info
+Model Number Innova Crysta VX 2.4 8 STR 2023
+*Engine 
+Displacement (Cc) 2393 cc
+Engine Power 148 bhp @ 3400 rpm
+Torque343 Nm @ 1400 rpm
+No. Of Cylinders 4 Cylinders
+Fuel Type Diesel
+*Fuel
+Mileage In City TBC
+Mileage On Highway TBC
+Fuel Type Diesel
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 4:
+
+Toyota Hilux High 2022
+Price in USD: $46,030
+
+Full Specification and Features
+*Basic Info
+Model Number Hilux High 2022
+Made In Japan
+*Engine 
+Displacement (Cc) 2.8 L Diesel Engine
+Engine Power 201.15 bhp @ 3400 rpm
+Torque 420 nm @ 1400 - 3400 rpm
+No. Of Cylinders 4 Cylinders
+Fuel Type Diesel
+*Fuel
+Mileage In City 8 KM/LITER
+Mileage On Highway 10 KM/LITER
+Fuel Type Diesel
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 5:
+
+Chevrolet Camaro 2SS 2022
+Price in USD: $42,500
+
+Full Specification and Features
+*Basic Info
+Model Number Chevrolet Camaro 2SS 2022
+Made In USA
+*Engine 
+Engine Type 6.2L V8 Gas
+Engine Power 455 hp @ 6000 rpm
+Torque 455 lb-ft @ 4400 rpm
+No. Of Cylinders 8 Cylinders
+Fuel Type Gasoline
+*Fuel
+Mileage In City 16 MPG
+Mileage On Highway 24 MPG
+Fuel Type Gasoline
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 6:
+
+Toyota Corolla 2021
+Price in USD: $21,710
+
+Full Specification and Features
+*Basic Info
+Model Number Corolla 2021
+Made In Japan
+*Engine 
+Displacement(Cc) 1800 CC
+Engine Power 140
+Torque 175
+No. Of Cylinders 4 Cylinders
+Fuel Type Petrol
+*Fuel
+Mileage In City 31 MPG
+Mileage On Highway 40 MPG
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 7:
+
+Jeep Compass 2022
+Price in USD: $26,020
+
+Full Specification and Features
+*Basic Info
+Model Number Compass 2022
+Made In: Toledo North
+Body Type SUV
+*Engine 
+Engine Type 2.4-liter Inline-4 Gas
+Engine Power 177 hp @ 6400 rpm
+Torque 172 lb-ft @ 3900 rpm
+No. Of Cylinders 4
+Fuel Type Gasoline 
+Charger Turbocharged
+*Fuel
+Mileage In City 22
+Mileage On Highway 31
+*Capacities
+Seating Capacity 5 passengers
+Fuel Tank Capacity 13.5 gallons
+No. Of Doors 4 doors
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 8:
+
+Mercedes Benz E Class Expression E 200 2022
+Price in USD: $85,620
+
+Full Specification and Features
+*Basic Info
+Model Number Benz E Class Expression E 200 2022
+Made In: USA
+Body Type Sedan
+*Engine 
+Engine Type 2.0 L in-line 6 cylinder
+Engine Power 281.61bhp@3400-4600rpm
+Torque 600nm@1200-3200rpm
+No. Of Cylinders 6
+Fuel Type Petrol
+Charger Turbocharged
+*Fuel
+Mileage In City 16 MPG
+Mileage On Highway 25MPG
+*Capacities
+Seating Capacity 5 passengers
+Fuel Tank Capacity 17.4 gallons
+No. Of Doors 4 doors
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 9:
+
+Tesla Model S 2023
+Price in USD: $94,990
+
+Full Specification and Features
+*Basic Info
+Model Number Model S 2023
+Body Type Hatchback
+*Engine 
+Engine Type Electric
+Engine Power 670 hp
+Charger Range 405 miles Battery Size 100 kWh Charge Time 15 Hrs Charge Time @ 220/240V, 0.75 Hrs Charge Time @ 440V
+*Fuel
+Mileage In City 124 MPGE
+Mileage On Highway 115 MPGE
+*Capacities
+Seating Capacity 5 passengers
+Fuel Tank Capacity 17.4 gallons
+No. Of Doors 4 doors
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 10:
+
+BMW 7 Series 2023
+Price in USD: $93,290
+
+Full Specification and Features
+*Basic Info
+Model Number 740i Sedan 2023
+Body Type Sedan
+*Engine 
+Engine Type 3.0L Turbo Inline-6 Gas
+Engine Power 375 hp @ 5200 rpm
+Torque 383 lb-ft @ 1850 rpm
+No. of Cylinders 6
+*Fuel
+Mileage In City 25 MPG
+Mileage On Highway 31 MPG
+Fuel Type Gasoline
+*Capacities
+Seating Capacity 5 passengers
+Fuel Tank Capacity 19.5 gallons
+No. Of Doors 4 doors
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 11:
+
+Toyota Hilux High 2021
+Price in USD: $42,030
+
+Full Specification and Features
+*Basic Info
+Model Number Hilux High 2021
+Made In Japan
+*Engine 
+Displacement (Cc) 2.7 L Diesel Engine
+Engine Power 201.15 bhp @ 3200 rpm
+Torque 420 nm @ 1400 - 3200 rpm
+No. Of Cylinders 4 Cylinders
+Fuel Type Diesel
+*Fuel
+Mileage In City 7.8 KM/LITER
+Mileage On Highway 9.5 KM/LITER
+Fuel Type Diesel
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 12:
+
+Lamborghini Autentica
+Price in USD: $500,000
+
+Full Specification and Features
+*Basic Info
+Model Number Autentica
+Made In Italy
+Body Type Convertible
+*Engine 
+Engione Type 6.5L V12 Gas
+Engine Power 769 hp @ 8400 rpm
+Torque 720 lb-ft
+No. Of Cylinders 12 Cylinders
+*Fuel
+Mileage In City 11 MPG
+Mileage On Highway 18 MPG
+Fuel Type Gasoline
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 13:
+
+Lamborghini Aventador LP78=04 Ultimate 2023
+Price in USD: $498,250
+
+Full Specification and Features
+*Basic Info
+Model Number Aventador LP78=04 Ultimate 2023
+Made In Italy
+Body Type Coupe
+*Engine 
+Engione Type 6.5L V12 Gas
+Engine Power 769 hp @ 8400 rpm
+Torque 531 lb-ft @ 5500 rpm
+No. Of Cylinders 12 Cylinders
+*Fuel
+Mileage In City 9 MPG
+Mileage On Highway 15 MPG
+Fuel Type Gasoline
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 14:
+
+Rolls Royce Spectre 2023
+Price in USD: $400,000
+
+Full Specification and Features
+*Basic Info
+Model Number Spectre 2023
+Made In England
+Body Type Coupe
+*Engine 
+Engione Type Electric
+Engine Power 577 hp
+Torque 664 lb-ft
+Charger Yes 260 miles Range
+*Fuel
+Mileage In City 124 MPGE
+Mileage On Highway 120 MPGE
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 15:
+
+Toyota Prado TX 3.0D 2020
+Price in USD: $142,100
+
+Full Specification and Features
+*Basic Info
+Model Number Prado TX 3.0D 2020
+Made In Japan
+Body Type SUV
+*Engine 
+Displacement(Cc) 2982 cc
+Engine Power 173 hp @ 3400 RPM
+Torque 352 Nm @ 1800 RPM
+No. Of Cylinders 4 Cylinders
+*Fuel
+Mileage In City 8 KMPL
+Mileage On Highway 10 KMPL
+Fuel Type Diesel
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 16:
+
+Porsche Panamera E-Hybrid Sport Turismo 2023
+Price in USD: $113,000
+
+Full Specification and Features
+*Basic Info
+Model Number Panamera E-Hybrid Sport Turismo 2023
+Made In Germany
+Body Type Wagon
+*Engine 
+Engine Type 2.9L Twin-Turbo V6 Plug-in Hybrid
+Engine Power 455 hp @ 5400 rpm
+Torque 516 lb-ft
+No. Of Cylinders 6 Cylinders
+*Fuel
+Mileage In City 123 mpg
+Mileage On Highway 128 mpg
+Fuel Type Diesel
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+
+Car 17:
+
+Audi A8 Hybrid 2022
+Price in USD: $98,900
+
+Full Specification and Features
+*Basic Info
+Model Number A8 Hybrid 2022
+Made In USA
+Body Type Sedan
+*Engine 
+Engine Type 3.0-liter Turbo V6 Plug-in Hybrid
+Engine Power 335 hp @ 5000 rpm
+Torque 369 lb-ft @ 1370 rpm
+No. Of Cylinders 6 Cylinders
+*Fuel
+Mileage In City 11.7KMPL
+Mileage On Highway 13KMPL
+Fuel Type Diesel
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 18:
+
+Land Rover Range Rover Velar P400 HST 2023
+Price in USD: $79,200
+
+Full Specification and Features
+*Basic Info
+Model Range Rover Velar P400 HST 2023
+Body Type SUV
+*Engine 
+Engine Type 3.0L Turbo Inline-6 Gas
+Engine Power 395 hp @ 5500 rpm
+Torque 405 lb-ft @ 2000 rpm
+No. Of Cylinders 6 Cylinders
+*Fuel
+Mileage In City 19 MPG
+Mileage On Highway 25 MPG
+Fuel Type Gasoline
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 19:
+
+Jaguar I Pace EV320 2023
+Price in USD: $79,090
+
+Full Specification and Features
+*Basic Info
+Model Range I Pace EV320 2023
+Body Type SUV
+*Engine 
+Engine Type AWD 236 kW (321 hp)
+Engine Power 395 hp @ 5500 rpm
+Torque 500 Nm (369 lb-ft)
+No. Of Cylinders 6 Cylinders
+*Fuel
+Mileage In City 19 MPG
+Mileage On Highway 25 MPG
+Fuel Type Diesel
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Car 20:
+
+Hyundai Verna SX 1.5 CRDi 2023
+Price in USD: $15,530
+
+Full Specification and Features
+*Basic Info
+Model Range Verna SX 1.5 CRDi 2023
+*Engine 
+Engine Type 1.5 l U2 CRDi
+Engine Power 113 bhp @ 4000 rpm
+Torque 250 Nm @ 1500 rpm
+No. Of Cylinders 4 Cylinders
+*Fuel
+Mileage In City 15 MPG
+Mileage On Highway 20 MPG
+Fuel Type Diesel
+*Safety
+Anti-Lock Braking Yes
+Brake Assist Yes
+Central Locking Yes
+Power Door Locks Yes
+Child Safety Locks Yes
+Rear Seat Belts Yes
+Seat Belt Warning Yes
+Door Ajar Warning Yes
+Adjustable Seats Yes
+Keyless Entry Yes
+Tyre Pressure Monitor Yes
+Engine Immobilizer Yes
+Crash Sensor Yes
+Engine Check Warning Yes
+Rear Camera Yes
+Anti-Theft Device Yes
+
+Partners:
+1. Nissan
+2. Ferrari
+3. Toyota
+4. Chevrolet
+5. Jeep
+6. Mercedes-Benz
+7. Tesla
+8. BMW
+9. Lamborghini
+10. Rolls Royce
+11. Porsche
+12. Hyundai
+13. Land Rover
+14. Jaguar
+15. Audi

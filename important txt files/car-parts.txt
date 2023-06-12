@@ -1,0 +1,10 @@
+INSERT INTO car_parts (name, state, price, details, image) VALUES
+    ('Engine Components', 'Latest', '$2.5k - $29k', 'This includes items like engines, cylinder heads, pistons, crankshafts, camshafts, and valves.', 'parts-01.png'),
+    ('Transmission and Drivetrain Parts', 'Pre-owned & Brand New', '$100 - $5k', 'Transmission assemblies, gearboxes, differentials, drive shafts, and axles are in demand.', 'parts-02.png'),
+    ('Suspension and Steering Components', 'Pre-owned', '$2k - $35k', 'Shocks, struts, control arms, tie rods, ball joints, and steering racks are commonly sold parts.', 'parts-03.png'),
+    ('Electrical and Ignition Parts', 'Refurbished', '$1k - $15k','Alternators, starters, spark plugs, ignition coils, wiring harnesses, and various sensors can be sold.', 'parts-04.png'),
+    ('Body and Exterior Parts', 'Refurbished', '$1.2k - $25k', 'Bumpers, fenders, hoods, doors, mirrors, grilles, headlights, and taillights are frequently sought-after parts.', 'parts-05.png'),
+    ('Exhaust System Parts', 'Latest', '$800 - $30k', 'Catalytic converters, mufflers, exhaust pipes, and headers have value due to their precious metal content.', 'parts-06.png'),
+    ('Brake Components', 'Brand New', '$2.5k - $28k', 'Brake pads, rotors, calipers, brake lines, and master cylinders are commonly replaced parts.', 'parts-07.png'),
+    ('Cooling System Parts', 'Refurbished', '$400 - $21k', 'Radiators, water pumps, thermostat housings, hoses, and fans can be sold.', 'parts-08.png'),
+    ('Wheels and Tires', 'Pre-owned & Refurbished', '$250 - $17k', 'Rims and tires, especially if they are in good condition or part of a sought-after set, can fetch a good price.', 'parts-09.png');
