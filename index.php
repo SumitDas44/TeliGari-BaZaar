@@ -456,7 +456,7 @@
         <div class="form-box">
             <h3>Subscribe for latest updates</h3>
         <p>Make sure to subscribe to get the latest catelogs, car news, pricing and many more!!!</p>
-        <form action="">
+        <form action="login_form.php">
             <input type="email" name="" placeholder="enter your email" id="">
             <input type="submit" class="subscribe" name="" id="">
         </form>

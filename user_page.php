@@ -7,6 +7,29 @@
         header('location:index.php');
     }
 
+    //newsletter update codes
+    if(isset($_POST['submit'])){
+
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+
+        $insert = "INSERT INTO newsletter(email) VALUES('$email')";
+        mysqli_query($conn, $insert);
+        header('location:user_page.php');
+    };
+
+    //appointments codes
+    if(isset($_POST['submit'])){
+
+        $name = mysqli_real_escape_string($conn, $_POST['name']);
+        $number = mysqli_real_escape_string($conn, $_POST['number']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $message = mysqli_real_escape_string($conn, $_POST['message']);
+
+        $insert = "INSERT INTO appointments(name, email, number, message) VALUES('$name','$email','$number','$message')";
+        mysqli_query($conn, $insert);
+        header('location:user_page.php');
+    };
+
 ?>
 
 <!DOCTYPE html>
@@ -344,7 +367,7 @@
                 <i class="fas fa-headset"></i>
                 <h3>24/7 suport</h3>
                 <p>Always Here for You, Anytime, Anywhere.</p>
-                <a href="#" class="btn">check out</a>
+                <a href="#contact" class="btn">check out</a>
             </div>
         </div>
     </section>
@@ -532,9 +555,9 @@
         <div class="form-box">
             <h3>Subscribe for latest updates</h3>
         <p>Make sure to subscribe to get the latest catelogs, car news, pricing and many more!!!</p>
-        <form action="">
-            <input type="email" name="" placeholder="enter your email" id="">
-            <input type="submit" class="subscribe" name="" id="">
+        <form action="" method="POST">
+            <input type="email" name="email" placeholder="enter your email" id="">
+            <input type="submit" class="subscribe" name="submit" id="">
         </form>
         </div>
      </section>
@@ -690,13 +713,13 @@
         <h1 class="heading"> <span>contact</span> us </h1>
         <div class="row">
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14701.594774714187!2d89.4861638008427!3d22.8986608349872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff9bdc23b963af%3A0x3de96c3c04d4890!2sTeligati%2C%20Khulna!5e0!3m2!1sen!2sbd!4v1685313488394!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <form action="">
+        <form action="" method="POST">
             <h3>get in touch</h3>
-                <input type="text" placeholder="name" class="box">
-                <input type="email" placeholder="email" class="box">
-                <input type="number" placeholder="number" class="box">
-                <textarea placeholder="message" class="box" name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit" value="send message" class="btn">
+                <input type="text" name="name" placeholder="name" class="box">
+                <input type="email" name="email" placeholder="email" class="box">
+                <input type="phone" name="number" placeholder="number" class="box">
+                <textarea placeholder="message" name="message" class="box" name="" id="" cols="30" rows="10"></textarea>
+                <input type="submit" name="submit" value="send message" class="btn">
         </form>
     </div>
     </section>
