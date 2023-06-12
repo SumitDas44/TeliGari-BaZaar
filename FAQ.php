@@ -2,15 +2,15 @@
 
 @include 'config.php';
 
-// Retrieve fuel data from the database
-$sql = "SELECT * FROM fuel";
+// Retrieve faq data from the database
+$sql = "SELECT * FROM faq";
 $result = $conn->query($sql);
 
-// Store the fuel data in an array
-$fuel = array();
+// Store the battery data in an array
+$faq = array();
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $fuel[] = $row;
+        $faq[] = $row;
     }
 }
 
@@ -22,14 +22,14 @@ if(!isset($_SESSION['user_name'])){
 }
 ?>
 
-<!-- HTML code to display the car_parts data -->
+<!-- HTML code to display the battery data -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oil Change</title>
+    <title>FAQ</title>
 
     <!-- swiper cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -53,8 +53,8 @@ if(!isset($_SESSION['user_name'])){
         <a href="user_page.php#vehicles">vehicle</a>
         <a href="user_page.php#services">services</a>
         <a href="user_page.php#features">features</a>
-        <a href="user_page.php#reviews">reviews</a>
         <a href="user_page.php#contact">contact</a>
+        <a href="user_page.php#reviews">reviews</a>
     </nav>
     <div id="profile-btn" class="profile-btn-container">
         <div class="btn-wrapper">
@@ -136,20 +136,14 @@ if(!isset($_SESSION['user_name'])){
     <!-- header section ends  -->
 
     
-    <h1>Get the best deals from us!</h1>
+    <h1>Frequently asked Questions!</h1>
     
-    <div class="fuel-container">
-    <?php foreach ($fuel as $fuel): ?>
-        <div class="fuels">
+    <div class="faq-container">
+    <?php foreach ($faq as $faq): ?>
+        <div class="qs">
             <div class="content">
-                <img src="images/<?php echo $fuel['image']; ?>" alt="">
-                <h3><?php echo $fuel['name']; ?></h3>
-                <h4><?php echo $fuel['compatibility']; ?></h4>
-                <div class="price"><?php echo $fuel['price']; ?></div>
-                <p>
-                    <?php echo $fuel['details']; ?>
-               </p>
-                <a href="#" class="btn">Buy now!</a>
+                <h3><?php echo $faq['qs']; ?></h3>
+                <h4><?php echo $faq['ans']; ?></h4>
             </div>
         </div>
             <?php endforeach; ?>

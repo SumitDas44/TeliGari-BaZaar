@@ -1,0 +1,11 @@
+INSERT INTO faq(qs, ans) VALUES
+    ('What types of vehicles do you sell?', 'Answer: We offer a wide range of vehicles, including sedans, SUVs, trucks, and sports cars.'),
+    ('Are your vehicles new or used?', 'Answer: We have both new and used vehicles available for purchase.'),
+    ('Can I schedule a test drive?', 'Answer: Yes, we encourage you to schedule a test drive of any vehicle you are interested in. Please contact our sales team to arrange a convenient time.'),
+    ('Do you offer financing options?', 'Answer: Yes, we provide financing options through partnerships with various financial institutions. Our finance team can assist you in finding the best option to suit your needs.'),
+    ('What is the process for trading in my current vehicle?', 'Answer: We accept trade-ins. Our experienced appraisers will assess the value of your vehicle and provide you with an offer that can be applied toward the purchase of a new vehicle from us.'),
+    ('Do you provide vehicle maintenance and service?', 'Answer: Yes, we have a dedicated service center staffed with certified technicians who can handle all your maintenance and service needs, including regular inspections, oil changes, tire rotations, and more.'),
+    ('What warranty options are available for your vehicles?', 'Answer: Our new vehicles come with manufacturer warranties. Additionally, we offer extended warranty options for both new and used vehicles, providing you with added peace of mind.'),
+    ('Are your vehicles inspected for quality and safety?', 'Answer: Yes, all our vehicles go through a rigorous inspection process to ensure they meet our high standards for quality and safety before being offered for sale.'),
+    ('Can I customize or add accessories to the vehicles?', 'Answer: Yes, we offer a range of accessories and customization options to personalize your vehicle. Our team can assist you in selecting and installing the desired accessories.'),
+    ('Do you offer extended warranty plans?', 'Answer: Yes, we offer extended warranty plans that provide additional coverage beyond the standard warranty. These plans can be tailored to suit your specific needs.');

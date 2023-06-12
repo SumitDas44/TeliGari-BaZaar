@@ -322,6 +322,42 @@ h1{
     color: var(--yellow);
 }
 
+.faq-container {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    display: grid;
+    gap: 1.7rem;
+    background: #fcdcdc;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.faq-container .qs {
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    transform: scale(1);
+}
+.faq-container .qs .content h3{
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--black);
+}
+.faq-container .qs .content h4{
+    font-size: 1.5rem;
+    color: var(--red);
+}
+.faq-container .qs:hover{
+    transform: scale(1.02);
+    background: var(--change);
+}
+.faq-container .qs:hover h3{
+    font-size: 1.8rem;
+    color: var(--yellow);
+}
+
 .footer{
     background: var(--light-yellow);
 }
