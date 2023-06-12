@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2023 at 08:43 PM
+-- Generation Time: Jun 12, 2023 at 06:27 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,35 @@ SET time_zone = "+00:00";
 --
 -- Database: `php_project_3.1_final`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `battery`
+--
+
+CREATE TABLE `battery` (
+  `name` varchar(255) NOT NULL,
+  `capacity` varchar(255) NOT NULL,
+  `price` varchar(32) NOT NULL,
+  `details` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `battery`
+--
+
+INSERT INTO `battery` (`name`, `capacity`, `price`, `details`, `image`) VALUES
+('Energizer', '74 Amps. 12 Volts', '$260', 'Filled, charged and instantly ready to use, Maintenance-free', 'battery-01.png'),
+('Bosch', '35 Amps. 28 Volts', '$75', 'Performance range with Silver alloy technology, Bosch S5 Batteries are powered with advanced silver alloy technology.', 'battery-02.png'),
+('Bosch', '45 Amps. 12 Volts', '$80', 'Performance range with Silver alloy technology, Bosch S5 Batteries are powered with advanced silver alloy technology.', 'battery-03.png'),
+('Platinum', '70 Amps. 12 Volts', '$175', 'A brand-new, unused, unopened and undamaged item in original retail packaging.', 'battery-04.png'),
+('Super sm', '55 Amps. 12 Volts', '$120', 'Super small car batteries often utilize advanced technologies such as lithium-ion or lithium-polymer chemistry, which offer higher energy density and longer lifespan compared to traditional lead-acid batteries.', 'battery-05.png'),
+('DieHard', '30 Amps. 12 Volts', '$60', 'Spill proff, sealed, valve regulated and vibration resistant.', 'battery-06.png'),
+('Tudor', '74 Amps. 12 Volts', '$130', 'Tudor car batteries are trusted by car owners and mechanics for their durability, dependability, and ability to provide the necessary power to start the engine and operate the electrical systems of a vehicle.', 'battery-07.png'),
+('Panasonic', '49 Amps. 12 Volts', '$95', 'With a focus on longevity and dependability, Panasonic car batteries are a trusted choice for automotive applications. ', 'battery-08.png'),
+('Exide', '50 Amps. 12 Volts', '$105', 'Exide car batteries often use lead-acid technology, which has been widely used in the automotive industry for many years.', 'battery-09.png');
 
 -- --------------------------------------------------------
 
@@ -96,6 +125,88 @@ INSERT INTO `car_parts` (`name`, `state`, `price`, `details`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `courses`
+--
+
+CREATE TABLE `courses` (
+  `course` varchar(32) NOT NULL,
+  `requirement1` varchar(255) NOT NULL,
+  `requirement2` varchar(255) NOT NULL,
+  `requirement3` varchar(255) NOT NULL,
+  `requirement4` varchar(255) NOT NULL,
+  `fee` varchar(32) NOT NULL,
+  `details` varchar(255) NOT NULL,
+  `image` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`course`, `requirement1`, `requirement2`, `requirement3`, `requirement4`, `fee`, `details`, `image`) VALUES
+('Drive Wise', 'Age: 16 & up', 'Verified ID required', 'Parental Consent required', 'Medical conditions must be verified', '$150', 'This course is designed for individuals with little or no driving experience and covers fundamental driving skills and knowledge.', 'course-01.png'),
+('Be a Pro', 'Age: 18 & up', 'Verified NID required', '', 'Medical conditions must be verified', '$350', 'An intermediate driving course, which builds upon the basics and focuses on advanced driving techniques and maneuvers.', 'course-02.png'),
+('Become a Master', 'Age: 21 & up', 'Verified NID required', '', 'Medical conditions must be verified', '$650', 'Intensive driving courses, also known as accelerated or crash courses, provide a condensed learning experience over a shorter period.', 'course-03.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fuel`
+--
+
+CREATE TABLE `fuel` (
+  `name` varchar(255) NOT NULL,
+  `compatibility` varchar(255) NOT NULL,
+  `price` varchar(255) NOT NULL,
+  `details` varchar(255) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `fuel`
+--
+
+INSERT INTO `fuel` (`name`, `compatibility`, `price`, `details`, `image`) VALUES
+('Castrol', 'jet, diesel and racing engines', '$27.49/litre', '1.4X superior sludge protection compared to tough industry standards, as measured in the Sequence VH Sludge test vs. API SP test limits. Advanced protection against viscosity and thermal breakdown.', 'fuel-01.png'),
+('MoBil', 'Caterpillar, Cummins, Detroit, Mack, Mercedes Benz, Renault', '$21.51/litre', 'High output, low emission diesel engines significantly increase the demands on engine lubricants. Advanced detergency/dispersancy.', 'fuel-02.png'),
+('LiquiMoly', 'Has the right moto oil to match every vehicle in the world.', '$48.28/litre', 'High-tech low-friction motor oil based on synthetic technology. Outstanding protection against wear, reduces oil and fuel consumption and ensures fast oil penetration of the engine.', 'fuel-03.png'),
+('Valvoline', 'Mercedes Benz, Volkswagen, Porsche and BMW', '$31.73/litre', 'Excellent low and high tempearture performance. Outstanding protection against wear, reduces oil and fuel consumption and ensures fast oil penetration of the engine.', 'fuel-04.png'),
+('Delo', 'naturally aspirated and turbocharged four-stroke diesel engines and four-stroke gasoline engines.', '$16.72/litre', 'Performance improvements are the result of ISOSYN Advanced Technology - the combination of Chevrons industry leading formulation experience and unique, high performace additive chemistry.', 'fuel-05.png'),
+('Total QUARTZ', 'BMW, Mercedez Benz, Volkswagen, Hyundai-kai and low SaPS motors', '$31.24/litre', 'high-performance synthetic motor oil is recommended for both premium gasoline and diesel engines. When you need extended drain intervals and optimal engine protection for your high-performance engine, this is the oil for you!', 'fuel-06.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `insurance`
+--
+
+CREATE TABLE `insurance` (
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `dob` date NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `accident` varchar(255) NOT NULL,
+  `phone` int(32) NOT NULL,
+  `vin` varchar(255) NOT NULL,
+  `driver` varchar(255) NOT NULL,
+  `car` varchar(255) NOT NULL,
+  `coverage_expiration` varchar(255) NOT NULL,
+  `to_be_paid` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `insurance`
+--
+
+INSERT INTO `insurance` (`fname`, `lname`, `dob`, `address`, `email`, `accident`, `phone`, `vin`, `driver`, `car`, `coverage_expiration`, `to_be_paid`) VALUES
+('Sumit', 'Das', '1999-07-17', '173, East Goran, Road #08, Khilgaon, Dhaka', 'sumit.sd123471@gmail.com', 'no', 1775919428, 'JH4KA4630JC008595', 'Sumit Das', 'Tesla Model S', '2033-06-10', '50,000$'),
+('Amit ', 'Das', '2006-06-24', '173, East Goran, Road #08, Khilgaon, Dhaka', 'amit.d1cey47@gmail.com', 'no', 1851441493, '4T1BG22K8VU176482', 'Amit Das', 'Audi A8', '2038-06-10', '80,000$'),
+('Shikha', 'Das', '1978-06-30', '173, East Goran, Road #08, Khilgaon, Dhaka', 'shikha@gmail.com', 'no', 1851441493, '1GNDX03E8WD341403', 'Shikha Das', 'Toyota Corolla', '2043-06-10', '30,000$');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user_form`
 --
 
@@ -117,7 +228,8 @@ INSERT INTO `user_form` (`id`, `name`, `email`, `password`, `user_type`) VALUES
 (5, 'Sumit3', 'sumit.jx@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user'),
 (6, 'Abdullah Abid', 'xyz@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user'),
 (7, 'Rakib Bin Mahbub Talukdar', 'xyz1@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user'),
-(8, 'H.M. Fahad', 'fahad@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user');
+(8, 'H.M. Fahad', 'fahad@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user'),
+(9, 'Sumaiya Alam Ananna', 'ananna@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user');
 
 --
 -- Indexes for dumped tables
@@ -137,7 +249,7 @@ ALTER TABLE `user_form`
 -- AUTO_INCREMENT for table `user_form`
 --
 ALTER TABLE `user_form`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
