@@ -338,7 +338,7 @@
                 <i class="fa-solid fa-graduation-cap"></i>
                 <h3>Driving lessons</h3>
                 <p>Driving Skills Unleashed, Confidence on the Road Achieved!</p>
-                <a href="#" class="btn">check out</a>
+                <a href="courses_user.php" class="btn">check out</a>
             </div>
             <div class="box">
                 <i class="fas fa-headset"></i>
