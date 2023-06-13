@@ -1,6 +1,6 @@
 <?php
 
-@include 'config.php';
+@include '../config.php';
 
 session_start();
 if(!isset($_SESSION['admin_name'])){
@@ -15,7 +15,7 @@ if(!isset($_SESSION['admin_name'])){
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Batteries!</title>
+    <title>Control Panel!</title>
 
     <!-- swiper cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -101,7 +101,76 @@ if(!isset($_SESSION['admin_name'])){
 
     
     <h1>Control Panel!</h1>
-    
+    <div class="add-container">
+        <div class="options">
+            <a href="add_cars.php">
+            <div class="btn">
+                <h2>+ Add CARS</h2>
+            </div>
+            </a>
+            <a href="add_car_parts.php">
+            <div class="btn">
+                <h2>+ Add CAR Parts</h2>
+            </div>
+            </a>
+            <a href="add_fuels.php">
+            <div class="btn">
+                <h2>+ Add Fuels</h2>
+            </div>
+            </a>
+            <a href="add_batteries.php">
+            <div class="btn">
+                <h2>+ Add Batteries</h2>
+            </div>
+            </a>
+            <a href="add_courses.php">
+            <div class="btn">
+                <h2>+ Add Courses</h2>
+            </div>
+            </a>
+            <a href="add_drivers.php">
+            <div class="btn">
+                <h2>+ Add Drivers</h2>
+            </div>
+            </a>
+            <a href="add_faq.php">
+            <div class="btn">
+                <h2>+ Add FAQ</h2>
+            </div>
+            </a>
+            <a href="../registration.php">
+            <div class="btn">
+                <h2>+ Add USER</h2>
+            </div>
+            </a>
+        </div>
+    </div>
+
+    <h1>Show Database Data</h1>
+    <div class="show-container">
+        <div class="options">
+            <a href="appointments.php">
+                <div class="btn">
+                    <h2>Appointments</h2>
+                </div>
+            </a>
+            <a href="insurance.php">
+                <div class="btn">
+                    <h2>Insurance form</h2>
+                </div>
+            </a>
+            <a href="Subscribers.php">
+                <div class="btn">
+                    <h2>Newsletter subscribers</h2>
+                </div>
+            </a>
+            <a href="All_users.php">
+                <div class="btn">
+                    <h2>All users</h2>
+                </div>
+            </a>
+        </div>
+    </div>
     
 
     <!-- footer section starts -->

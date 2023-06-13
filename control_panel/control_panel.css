@@ -163,7 +163,6 @@ h1{
     cursor: pointer;
     padding: 0.8rem 3rem;
 }
-
 .btn:hover {
     background: var(--yellow);
 }
@@ -178,6 +177,64 @@ h1{
     font-weight: bolder;
 }
 
+.add-container {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    background: #fcdcdc;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.add-container .options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+}
+.add-container .options .btn{
+    width: 30rem;
+}
+.add-container .options .btn:hover{
+    transform: scale(1.1);
+}
+.add-container .options:hover{
+    transform: scale(1.05);
+    background: var(--change);
+}
+
+.show-container {
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    background: #fcdcdc;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.show-container .options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+}
+.show-container .options .btn{
+    font-size: 1.3rem;
+    width: 30rem;
+}
+.show-container .options .btn:hover{
+    transform: scale(1.1);
+}
+.show-container .options:hover{
+    transform: scale(1.05);
+    background: var(--change);
+}
 
 .footer{
     background: var(--light-yellow);
