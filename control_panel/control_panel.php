@@ -2,34 +2,20 @@
 
 @include 'config.php';
 
-// Retrieve fuel data from the database
-$sql = "SELECT * FROM fuel";
-$result = $conn->query($sql);
-
-// Store the fuel data in an array
-$fuel = array();
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $fuel[] = $row;
-    }
-}
-
-$conn->close();
-
 session_start();
 if(!isset($_SESSION['admin_name'])){
     header('location:index.php');
 }
 ?>
 
-<!-- HTML code to display the car_parts data -->
+<!-- HTML code to display the battery data -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oil Change</title>
+    <title>Buy Batteries!</title>
 
     <!-- swiper cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -37,7 +23,7 @@ if(!isset($_SESSION['admin_name'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="teligari_controller.css">
+    <link rel="stylesheet" href="control_panel.css">
 </head>
 <body>
 
@@ -46,15 +32,15 @@ if(!isset($_SESSION['admin_name'])){
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
-    <a href="admin_page.php" class="logo"><span>TeliGari</span>BaZaar</a>
+    <a href="../admin_page.php" class="logo"><span>TeliGari</span>BaZaar</a>
 
     <nav class="navbar">
-        <a href="admin_page.php#home">home</a>
-        <a href="admin_page.php#vehicles">vehicle</a>
-        <a href="admin_page.php#services">services</a>
-        <a href="admin_page.php#features">features</a>
-        <a href="admin_page.php#reviews">reviews</a>
-        <a href="admin_page.php#contact">contact</a>
+        <a href="../admin_page.php#home">home</a>
+        <a href="../admin_page.php#vehicles">vehicle</a>
+        <a href="../admin_page.php#services">services</a>
+        <a href="../admin_page.php#features">features</a>
+        <a href="../admin_page.php#reviews">reviews</a>
+        <a href="../admin_page.php#contact">contact</a>
     </nav>
     <div id="profile-btn" class="profile-btn-container">
         <div class="btn-wrapper">
@@ -96,18 +82,7 @@ if(!isset($_SESSION['admin_name'])){
                     </a>
                 </li>
                 <li>
-                    <a href="control_panel/control_panel.php">
-                    <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
-                    <path class="svg-fill-primary" d="M71.1,16.4h-5.07c-.62-1.82-1.65-3.49-3.07-4.87-2.37-2.32-5.5-3.55-8.76-3.53h-8.5c-5.44,0-10.06,3.52-11.73,8.4h-5.07c-6.89,0-12.5,5.61-12.5,12.5v50.7c0,6.84,5.56,12.4,12.4,12.4h42.4c6.77,0,12.32-5.46,12.4-12.3V28.9c0-6.89-5.61-12.5-12.5-12.5Zm-25.4-.4h8.6c1.16,0,2.25,.44,3.07,1.25,.84,.82,1.32,1.92,1.33,3.15,0,2.48-2.02,4.5-4.5,4.5h-8.4c-2.48,0-4.5-2.02-4.5-4.5,0-2.43,1.97-4.4,4.4-4.4Zm29.9,63.65c-.03,2.41-2,4.35-4.45,4.35H28.8c-2.43,0-4.4-1.97-4.4-4.4V28.9c0-2.48,2.02-4.5,4.5-4.5h5.07c1.67,4.93,6.34,8.5,11.83,8.5h8.4c5.49,0,10.16-3.57,11.83-8.5h5.07c2.48,0,4.5,2.02,4.5,4.5v50.75Z">
-                    </path>
-                    <path class="svg-fill-primary" d="M71.1,24.4h-5.07c-1.67,4.93-6.34,8.5-11.83,8.5h-8.4c-5.49,0-10.16-3.57-11.83-8.5h-5.07c-2.48,0-4.5,2.02-4.5,4.5v50.7c0,2.43,1.97,4.4,4.4,4.4h42.35c2.45,0,4.42-1.94,4.45-4.35V28.9c0-2.48-2.02-4.5-4.5-4.5Zm-5.57,28.43l-16.9,16.9c-.78,.78-1.81,1.17-2.83,1.17s-2.03-.38-2.81-1.15l-8.5-8.41c-1.57-1.55-1.59-4.08-.04-5.65,1.56-1.57,4.09-1.59,5.66-.03l5.67,5.6,14.09-14.09c1.56-1.56,4.1-1.56,5.66,0,1.56,1.56,1.56,4.1,0,5.66Z" opacity=".5">
-                    </path>
-                    </svg>
-                        <span>Control Panel</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="logout.php">
+                    <a href="../logout.php">
                     <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path class="svg-fill-primary" d="M42.9,82.5h-14.3c-8.105,0-14.7-6.595-14.7-14.7V32.2c0-8.106,6.595-14.7,14.7-14.7h14.3c8.105,0,14.7,6.594,14.7,14.7v3.5c0,2.209-1.791,4-4,4s-4-1.791-4-4v-3.5c0-3.694-3.005-6.7-6.7-6.7h-14.3c-3.694,0-6.7,3.006-6.7,6.7v35.6c0,3.694,3.006,6.7,6.7,6.7h14.3c3.694,0,6.7-3.006,6.7-6.7v-3.5c0-2.209,1.791-4,4-4s4,1.791,4,4v3.5c0,8.105-6.595,14.7-14.7,14.7Z" opacity=".5">
                     </path>
@@ -125,24 +100,9 @@ if(!isset($_SESSION['admin_name'])){
     <!-- header section ends  -->
 
     
-    <h1>Get the best deals from us!</h1>
+    <h1>Control Panel!</h1>
     
-    <div class="fuel-container">
-    <?php foreach ($fuel as $fuel): ?>
-        <div class="fuels">
-            <div class="content">
-                <img src="images/<?php echo $fuel['image']; ?>" alt="">
-                <h3><?php echo $fuel['name']; ?></h3>
-                <h4><?php echo $fuel['compatibility']; ?></h4>
-                <div class="price"><?php echo $fuel['price']; ?></div>
-                <p>
-                    <?php echo $fuel['details']; ?>
-               </p>
-                <a href="#" class="btn">Buy now!</a>
-            </div>
-        </div>
-            <?php endforeach; ?>
-    </div>
+    
 
     <!-- footer section starts -->
 
