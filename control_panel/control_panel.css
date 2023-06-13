@@ -195,6 +195,12 @@ h1{
     box-shadow: var(--box-shadow);
     border-radius: 0.5rem;
 }
+.add-container form{
+    display: grid;
+    padding-bottom: 5rem;
+    justify-content: center;
+    place-items: center;
+}
 .add-container .options .btn{
     width: 30rem;
 }
@@ -234,6 +240,24 @@ h1{
 .show-container .options:hover{
     transform: scale(1.05);
     background: var(--change);
+}
+
+input[type="email"], input[type="text"]{
+    height: 90%;
+    width: 100rem;
+    font-size: 1.8rem;
+    /* margin-left: 15rem; */
+    color: var(--black);
+    text-transform: none;
+    padding: 2rem;
+}
+input[type="submit"]{
+    height: 100%;
+    width: 17rem;
+    font-size: 1.7rem;
+    color: var(--black);
+    background: var(--light-yellow);
+    cursor: pointer;
 }
 
 .footer{
