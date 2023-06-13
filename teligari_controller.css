@@ -358,6 +358,62 @@ h1{
     color: var(--yellow);
 }
 
+.driver-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(43rem, 1fr));
+    gap: 4rem;
+    background: #fcdcdc;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.driver-container .drivers {
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    transform: scale(1);
+}
+.driver-container .drivers img{
+    height: 270px;
+    width: auto;
+    border-radius: 10px;
+}
+.driver-container .drivers .content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.driver-container .drivers .content .sub-content{
+    padding: 1rem;
+}
+.driver-container .drivers .content h3{
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--black);
+}
+.driver-container .drivers .content h4{
+    font-size: 1.8rem;
+    color: var(--red);
+}
+.driver-container .drivers:hover{
+    transform: scale(1.05);
+    background: var(--change);
+}
+.driver-container .drivers:hover h3{
+    font-size: 2.1rem;
+    color: var(--yellow);
+}
+.driver-container .drivers:hover h4{
+    color: black;
+}
+.driver-container .drivers:hover .fa-star{
+    color: var(--yellow);
+}
+
 .footer{
     background: var(--light-yellow);
 }

@@ -355,7 +355,7 @@
                 <i class="fa-regular fa-user"></i>
                 <h3>Hire drivers</h3>
                 <p>Connecting Drivers to Opportunities, Guiding the Road to Success.</p>
-                <a href="#" class="btn">check out</a>
+                <a href="drivers_user.php" class="btn">check out</a>
             </div>
             <div class="box">
                 <i class="fa-solid fa-graduation-cap"></i>

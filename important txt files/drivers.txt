@@ -1,0 +1,12 @@
+INSERT INTO drivers(name, age, experience, jobs, quality1, quality2, quality3, image) VALUES
+    ('Rakib Bin Mahbub Talukder', 28, '8 years', 17, 'Experienced', 'Defensive Driving', 'Focus and Concentration', 'rakib.jpg'),
+    ('Kowshik Halder', 27, '6 years', 13, 'Good Judgment', 'Patience and Courtesy', 'Situational Awareness', 'kowshik.jpg'),
+    ('Motiya Rahman Piya', 25, '4 years', 6, 'Friendly Behaviour', 'Skillful maneuvering', 'Spatial awareness', 'piya.jpg'),
+    ('Shuva Podder', 26, '5 years', 11,'Adaptability', 'Responsible', 'Focus and Concentration', 'shuva.jpg'),
+    ('H.M. Fahad', 28, '7 years', 14, 'Self-Discipline', 'Awareness of Surroundings', 'Patience and Courtesy', 'fahad.jpg'),
+    ('Sumaiya Alam Ananna', 24, '2 years', 4,'Focus and Concentration', 'Continuous Learning', 'Confidence and Calmness', 'ananya.jpg'),
+    ('Imamul Islam Ifti', 27, '6 years', 10, 'Responsibility and Accountability', 'Good Communication', 'Situational Awareness', 'ifti.jpg'),
+    ('Abhrojit Paul Priom', 29, '8 years', 21, 'Experienced', 'Good Judgment', 'Technical Skills', 'priom.jpg'),
+    ('Fariha Alam Rafa', 25, '4 years', 7, 'Patience and Courtesy', 'Good Communication', 'Defensive Driving', 'rafa.jpg'),
+    ('Mushfiqul Islam Nabil', 28, '7 years', 12, 'Awareness of Limitations', 'Judgment and Decision-making', 'Skill and Control', 'nabil.jpg'),
+    ('Robins Chowdhury', 28, '6 years', 9,'Spatial awareness and coordination', 'Patience and calmness', 'Alertness and Attention', 'robin.jpg');

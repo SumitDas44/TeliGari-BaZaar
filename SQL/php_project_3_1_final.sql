@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2023 at 06:27 PM
+-- Generation Time: Jun 13, 2023 at 02:29 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `php_project_3.1_final`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointments`
+--
+
+CREATE TABLE `appointments` (
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `number` int(32) NOT NULL,
+  `message` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `appointments`
+--
+
+INSERT INTO `appointments` (`name`, `email`, `number`, `message`) VALUES
+('Sumit Das', 'sumit.sd123471@gmail.com', 1775919428, 'I\'d like to visit your showroom and do a test drive of a car. Is that possible?'),
+('amit das', 'amit@gmail.com', 1700000000, 'I want to buy some car parts. Where is your physical shop?');
 
 -- --------------------------------------------------------
 
@@ -151,6 +172,33 @@ INSERT INTO `courses` (`course`, `requirement1`, `requirement2`, `requirement3`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `faq`
+--
+
+CREATE TABLE `faq` (
+  `qs` varchar(255) NOT NULL,
+  `ans` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `faq`
+--
+
+INSERT INTO `faq` (`qs`, `ans`) VALUES
+('What types of vehicles do you sell?', 'Answer: We offer a wide range of vehicles, including sedans, SUVs, trucks, and sports cars.'),
+('Are your vehicles new or used?', 'Answer: We have both new and used vehicles available for purchase.'),
+('Can I schedule a test drive?', 'Answer: Yes, we encourage you to schedule a test drive of any vehicle you are interested in. Please contact our sales team to arrange a convenient time.'),
+('Do you offer financing options?', 'Answer: Yes, we provide financing options through partnerships with various financial institutions. Our finance team can assist you in finding the best option to suit your needs.'),
+('What is the process for trading in my current vehicle?', 'Answer: We accept trade-ins. Our experienced appraisers will assess the value of your vehicle and provide you with an offer that can be applied toward the purchase of a new vehicle from us.'),
+('Do you provide vehicle maintenance and service?', 'Answer: Yes, we have a dedicated service center staffed with certified technicians who can handle all your maintenance and service needs, including regular inspections, oil changes, tire rotations, and more.'),
+('What warranty options are available for your vehicles?', 'Answer: Our new vehicles come with manufacturer warranties. Additionally, we offer extended warranty options for both new and used vehicles, providing you with added peace of mind.'),
+('Are your vehicles inspected for quality and safety?', 'Answer: Yes, all our vehicles go through a rigorous inspection process to ensure they meet our high standards for quality and safety before being offered for sale.'),
+('Can I customize or add accessories to the vehicles?', 'Answer: Yes, we offer a range of accessories and customization options to personalize your vehicle. Our team can assist you in selecting and installing the desired accessories.'),
+('Do you offer extended warranty plans?', 'Answer: Yes, we offer extended warranty plans that provide additional coverage beyond the standard warranty. These plans can be tailored to suit your specific needs.');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `fuel`
 --
 
@@ -203,6 +251,27 @@ INSERT INTO `insurance` (`fname`, `lname`, `dob`, `address`, `email`, `accident`
 ('Sumit', 'Das', '1999-07-17', '173, East Goran, Road #08, Khilgaon, Dhaka', 'sumit.sd123471@gmail.com', 'no', 1775919428, 'JH4KA4630JC008595', 'Sumit Das', 'Tesla Model S', '2033-06-10', '50,000$'),
 ('Amit ', 'Das', '2006-06-24', '173, East Goran, Road #08, Khilgaon, Dhaka', 'amit.d1cey47@gmail.com', 'no', 1851441493, '4T1BG22K8VU176482', 'Amit Das', 'Audi A8', '2038-06-10', '80,000$'),
 ('Shikha', 'Das', '1978-06-30', '173, East Goran, Road #08, Khilgaon, Dhaka', 'shikha@gmail.com', 'no', 1851441493, '1GNDX03E8WD341403', 'Shikha Das', 'Toyota Corolla', '2043-06-10', '30,000$');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter`
+--
+
+CREATE TABLE `newsletter` (
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `newsletter`
+--
+
+INSERT INTO `newsletter` (`email`) VALUES
+('sumit.sd123471@gmail.com'),
+('sumit.js@gmail.com'),
+('amit@gmail.com'),
+('sumit.sd123471@gmail.com'),
+('amit@gmail.com');
 
 -- --------------------------------------------------------
 
