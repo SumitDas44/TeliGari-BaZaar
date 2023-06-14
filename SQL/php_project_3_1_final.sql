@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2023 at 02:29 AM
+-- Generation Time: Jun 14, 2023 at 07:42 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -112,7 +112,8 @@ INSERT INTO `cars` (`make`, `model`, `year`, `price`, `feature1`, `feature2`, `f
 ('Audi', 'A8 Hybrid', 2022, '$98,900', '3.0-liter Turbo V6 Plug-in Hybrid', 'Fuel Type Diesel', 'Body Type Sedan', 'car-17.png'),
 ('Land Rover', 'Range Rover Velar P400 HST', 2023, '$79,200', '3.0L Turbo Inline-6 Gas', 'Mileage In City 19 MPG', 'Body Type SUV', 'car-18.png'),
 ('Jaguar', 'I Pace EV320', 2023, '$79,090', 'AWD 236 kW (321 hp)', 'Fuel Type Diesel', 'Body Type SUV', 'car-19.png'),
-('Hyundai', 'Verna SX 1.5 CRDi', 2023, '$15,530', '1.5 l U2 CRDi', 'Mileage In City 15 MPG', 'Fuel Type Diesel', 'car-20.png');
+('Hyundai', 'Verna SX 1.5 CRDi', 2023, '$15,530', '1.5 l U2 CRDi', 'Mileage In City 15 MPG', 'Fuel Type Diesel', 'car-20.png'),
+('Hyundai', 'Sonata', 2021, '$17,800', '1.5 L U2 CRDi', 'Mileage In City 13 MPG', 'Fuel Type Diesel', 'car-21.png');
 
 -- --------------------------------------------------------
 
@@ -172,6 +173,41 @@ INSERT INTO `courses` (`course`, `requirement1`, `requirement2`, `requirement3`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `drivers`
+--
+
+CREATE TABLE `drivers` (
+  `name` varchar(255) NOT NULL,
+  `age` int(11) NOT NULL,
+  `experience` varchar(32) NOT NULL,
+  `jobs` int(11) NOT NULL,
+  `quality1` varchar(255) NOT NULL,
+  `quality2` varchar(255) NOT NULL,
+  `quality3` varchar(255) NOT NULL,
+  `image` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `drivers`
+--
+
+INSERT INTO `drivers` (`name`, `age`, `experience`, `jobs`, `quality1`, `quality2`, `quality3`, `image`) VALUES
+('Rakib Bin Mahbub Talukder', 28, '8 years', 17, 'Experienced', 'Defensive Driving', 'Focus and Concentration', 'rakib.jpg'),
+('Kowshik Halder', 27, '6 years', 13, 'Good Judgment', 'Patience and Courtesy', 'Situational Awareness', 'kowshik.jpg'),
+('Motiya Rahman Piya', 25, '4 years', 6, 'Friendly Behaviour', 'Skillful maneuvering', 'Spatial awareness', 'piya.jpg'),
+('Shuva Podder', 26, '5 years', 11, 'Adaptability', 'Responsible', 'Focus and Concentration', 'shuva.jpg'),
+('H.M. Fahad', 28, '7 years', 14, 'Self-Discipline', 'Awareness of Surroundings', 'Patience and Courtesy', 'fahad.jpg'),
+('Sumaiya Alam Ananna', 24, '2 years', 4, 'Focus and Concentration', 'Continuous Learning', 'Confidence and Calmness', 'ananya.jpg'),
+('Imamul Islam Ifti', 27, '6 years', 10, 'Responsibility and Accountability', 'Good Communication', 'Situational Awareness', 'ifti.jpg'),
+('Abhrojit Paul Priom', 29, '8 years', 21, 'Experienced', 'Good Judgment', 'Technical Skills', 'priom.jpg'),
+('Fariha Alam Rafa', 25, '4 years', 7, 'Patience and Courtesy', 'Good Communication', 'Defensive Driving', 'rafa.jpg'),
+('Mushfiqul Islam Nabil', 28, '7 years', 12, 'Awareness of Limitations', 'Judgment and Decision-making', 'Skill and Control', 'nabil.jpg'),
+('Robins Chowdhury', 28, '6 years', 9, 'Spatial awareness and coordination', 'Patience and calmness', 'Alertness and Attention', 'robin.jpg'),
+('Hasan Shohardyo', 27, '6 years', 10, 'Patience and Courtesy', 'Good Communication', 'Alertness and Attention', 'hasan.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `faq`
 --
 
@@ -194,7 +230,8 @@ INSERT INTO `faq` (`qs`, `ans`) VALUES
 ('What warranty options are available for your vehicles?', 'Answer: Our new vehicles come with manufacturer warranties. Additionally, we offer extended warranty options for both new and used vehicles, providing you with added peace of mind.'),
 ('Are your vehicles inspected for quality and safety?', 'Answer: Yes, all our vehicles go through a rigorous inspection process to ensure they meet our high standards for quality and safety before being offered for sale.'),
 ('Can I customize or add accessories to the vehicles?', 'Answer: Yes, we offer a range of accessories and customization options to personalize your vehicle. Our team can assist you in selecting and installing the desired accessories.'),
-('Do you offer extended warranty plans?', 'Answer: Yes, we offer extended warranty plans that provide additional coverage beyond the standard warranty. These plans can be tailored to suit your specific needs.');
+('Do you offer extended warranty plans?', 'Answer: Yes, we offer extended warranty plans that provide additional coverage beyond the standard warranty. These plans can be tailored to suit your specific needs.'),
+('How can I contact your customer support for further assistance?', 'Answer: We have a dedicated customer support team ready to assist you. You can reach out to us through our contact page on the website, where you\'ll find our phone number and email address. Feel free to contact us with any questions or concerns you may ha');
 
 -- --------------------------------------------------------
 
@@ -220,7 +257,8 @@ INSERT INTO `fuel` (`name`, `compatibility`, `price`, `details`, `image`) VALUES
 ('LiquiMoly', 'Has the right moto oil to match every vehicle in the world.', '$48.28/litre', 'High-tech low-friction motor oil based on synthetic technology. Outstanding protection against wear, reduces oil and fuel consumption and ensures fast oil penetration of the engine.', 'fuel-03.png'),
 ('Valvoline', 'Mercedes Benz, Volkswagen, Porsche and BMW', '$31.73/litre', 'Excellent low and high tempearture performance. Outstanding protection against wear, reduces oil and fuel consumption and ensures fast oil penetration of the engine.', 'fuel-04.png'),
 ('Delo', 'naturally aspirated and turbocharged four-stroke diesel engines and four-stroke gasoline engines.', '$16.72/litre', 'Performance improvements are the result of ISOSYN Advanced Technology - the combination of Chevrons industry leading formulation experience and unique, high performace additive chemistry.', 'fuel-05.png'),
-('Total QUARTZ', 'BMW, Mercedez Benz, Volkswagen, Hyundai-kai and low SaPS motors', '$31.24/litre', 'high-performance synthetic motor oil is recommended for both premium gasoline and diesel engines. When you need extended drain intervals and optimal engine protection for your high-performance engine, this is the oil for you!', 'fuel-06.png');
+('Total QUARTZ', 'BMW, Mercedez Benz, Volkswagen, Hyundai-kai and low SaPS motors', '$31.24/litre', 'high-performance synthetic motor oil is recommended for both premium gasoline and diesel engines. When you need extended drain intervals and optimal engine protection for your high-performance engine, this is the oil for you!', 'fuel-06.png'),
+('MoBil1', 'Mercedes-Benz, Porsche and Volkswagen', '$26.97/Litre', 'The viscosity is gaining popularity with American automakers for high performance engines in both cars and pickup trucks.', 'fuel-07.png');
 
 -- --------------------------------------------------------
 
@@ -298,7 +336,8 @@ INSERT INTO `user_form` (`id`, `name`, `email`, `password`, `user_type`) VALUES
 (6, 'Abdullah Abid', 'xyz@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user'),
 (7, 'Rakib Bin Mahbub Talukdar', 'xyz1@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user'),
 (8, 'H.M. Fahad', 'fahad@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user'),
-(9, 'Sumaiya Alam Ananna', 'ananna@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user');
+(9, 'Sumaiya Alam Ananna', 'ananna@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user'),
+(10, 'Kowshik Halder', 'kowshikh564@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user');
 
 --
 -- Indexes for dumped tables
@@ -318,7 +357,7 @@ ALTER TABLE `user_form`
 -- AUTO_INCREMENT for table `user_form`
 --
 ALTER TABLE `user_form`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
