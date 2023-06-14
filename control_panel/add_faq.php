@@ -126,8 +126,8 @@ if(!isset($_SESSION['admin_name'])){
     <h1>Add Frequently asked questions!</h1>
     <div class="add-container">
         <form action="" method="POST">
-        <input type="text" name="qs" required placeholder="Ënter the Question"><br>
-        <input type="text" name="ans" required placeholder="Ënter the Answer">
+        <input type="text" name="qs" required placeholder="Enter the Question"><br>
+        <input type="text" name="ans" required placeholder="Enter the Answer"><br>
         <input type="submit" name="submit" value="submit" class="btn">
         </form>
     </div>

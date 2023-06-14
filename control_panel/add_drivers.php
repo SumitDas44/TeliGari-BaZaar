@@ -2,6 +2,24 @@
 
 @include '../config.php';
 
+if(isset($_POST['submit'])){
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $age = mysqli_real_escape_string($conn, $_POST['age']);
+    $experience = mysqli_real_escape_string($conn, $_POST['experience']);
+    $jobs = mysqli_real_escape_string($conn, $_POST['jobs']);
+    $quality1 = mysqli_real_escape_string($conn, $_POST['quality1']);
+    $quality2 = mysqli_real_escape_string($conn, $_POST['quality2']);
+    $quality3 = mysqli_real_escape_string($conn, $_POST['quality3']);
+    $image = mysqli_real_escape_string($conn, $_POST['image']);
+
+    $insert = "INSERT INTO drivers(name, age, experience, jobs, quality1, quality2, quality3, image) VALUES('$name','$age','$experience','$jobs','$quality1','$quality2','$quality3','$image')";
+    mysqli_query($conn, $insert);
+    header('location:control_panel.php');
+        
+};
+
+
 session_start();
 if(!isset($_SESSION['admin_name'])){
     header('location:index.php');
@@ -82,6 +100,17 @@ if(!isset($_SESSION['admin_name'])){
                     </a>
                 </li>
                 <li>
+                    <a href="control_panel.php">
+                    <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+                    <path class="svg-fill-primary" d="M71.1,16.4h-5.07c-.62-1.82-1.65-3.49-3.07-4.87-2.37-2.32-5.5-3.55-8.76-3.53h-8.5c-5.44,0-10.06,3.52-11.73,8.4h-5.07c-6.89,0-12.5,5.61-12.5,12.5v50.7c0,6.84,5.56,12.4,12.4,12.4h42.4c6.77,0,12.32-5.46,12.4-12.3V28.9c0-6.89-5.61-12.5-12.5-12.5Zm-25.4-.4h8.6c1.16,0,2.25,.44,3.07,1.25,.84,.82,1.32,1.92,1.33,3.15,0,2.48-2.02,4.5-4.5,4.5h-8.4c-2.48,0-4.5-2.02-4.5-4.5,0-2.43,1.97-4.4,4.4-4.4Zm29.9,63.65c-.03,2.41-2,4.35-4.45,4.35H28.8c-2.43,0-4.4-1.97-4.4-4.4V28.9c0-2.48,2.02-4.5,4.5-4.5h5.07c1.67,4.93,6.34,8.5,11.83,8.5h8.4c5.49,0,10.16-3.57,11.83-8.5h5.07c2.48,0,4.5,2.02,4.5,4.5v50.75Z">
+                    </path>
+                    <path class="svg-fill-primary" d="M71.1,24.4h-5.07c-1.67,4.93-6.34,8.5-11.83,8.5h-8.4c-5.49,0-10.16-3.57-11.83-8.5h-5.07c-2.48,0-4.5,2.02-4.5,4.5v50.7c0,2.43,1.97,4.4,4.4,4.4h42.35c2.45,0,4.42-1.94,4.45-4.35V28.9c0-2.48-2.02-4.5-4.5-4.5Zm-5.57,28.43l-16.9,16.9c-.78,.78-1.81,1.17-2.83,1.17s-2.03-.38-2.81-1.15l-8.5-8.41c-1.57-1.55-1.59-4.08-.04-5.65,1.56-1.57,4.09-1.59,5.66-.03l5.67,5.6,14.09-14.09c1.56-1.56,4.1-1.56,5.66,0,1.56,1.56,1.56,4.1,0,5.66Z" opacity=".5">
+                    </path>
+                    </svg>
+                        <span>Control Panel</span>
+                    </a>
+                </li>
+                <li>
                     <a href="../logout.php">
                     <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path class="svg-fill-primary" d="M42.9,82.5h-14.3c-8.105,0-14.7-6.595-14.7-14.7V32.2c0-8.106,6.595-14.7,14.7-14.7h14.3c8.105,0,14.7,6.594,14.7,14.7v3.5c0,2.209-1.791,4-4,4s-4-1.791-4-4v-3.5c0-3.694-3.005-6.7-6.7-6.7h-14.3c-3.694,0-6.7,3.006-6.7,6.7v35.6c0,3.694,3.006,6.7,6.7,6.7h14.3c3.694,0,6.7-3.006,6.7-6.7v-3.5c0-2.209,1.791-4,4-4s4,1.791,4,4v3.5c0,8.105-6.595,14.7-14.7,14.7Z" opacity=".5">
@@ -97,81 +126,23 @@ if(!isset($_SESSION['admin_name'])){
         </div>
     </div>
 </header>
+
     <!-- header section ends  -->
 
-    
-    <h1>Control Panel!</h1>
+    <h1>Add Frequently asked questions!</h1>
     <div class="add-container">
-        <div class="options">
-            <a href="add_cars.php">
-            <div class="btn">
-                <h2>+ Add CARS</h2>
-            </div>
-            </a>
-            <a href="add_car_parts.php">
-            <div class="btn">
-                <h2>+ Add CAR Parts</h2>
-            </div>
-            </a>
-            <a href="add_fuels.php">
-            <div class="btn">
-                <h2>+ Add Fuels</h2>
-            </div>
-            </a>
-            <a href="add_batteries.php">
-            <div class="btn">
-                <h2>+ Add Batteries</h2>
-            </div>
-            </a>
-            <a href="add_courses.php">
-            <div class="btn">
-                <h2>+ Add Courses</h2>
-            </div>
-            </a>
-            <a href="add_drivers.php">
-            <div class="btn">
-                <h2>+ Add Drivers</h2>
-            </div>
-            </a>
-            <a href="add_faq.php">
-            <div class="btn">
-                <h2>+ Add FAQ</h2>
-            </div>
-            </a>
-            <a href="../registration.php">
-            <div class="btn">
-                <h2>+ Add USER</h2>
-            </div>
-            </a>
-        </div>
+        <form action="" method="POST">
+        <input type="text" name="name" required placeholder="Enter driver name">
+        <input type="text" name="age" required placeholder="Enter driver age">
+        <input type="text" name="experience" required placeholder="Driver experience (Ex: 5 years)">
+        <input type="text" name="jobs" required placeholder="No. of jobs completed">
+        <input type="text" name="quality1" required placeholder="Driver quality">
+        <input type="text" name="quality2" required placeholder="Driver quality">
+        <input type="text" name="quality3" required placeholder="Driver quality">
+        <input type="text" name="image" required placeholder="Driver image (Ex: sumit.jpg/.jpeg/.png)"><br>
+        <input type="submit" name="submit" value="submit" class="btn">
+        </form>
     </div>
-
-    <h1>Show Database Data</h1>
-    <div class="show-container">
-        <div class="options">
-            <a href="appointments.php">
-                <div class="btn">
-                    <h2>Appointments</h2>
-                </div>
-            </a>
-            <a href="insurance.php">
-                <div class="btn">
-                    <h2>Insurance form</h2>
-                </div>
-            </a>
-            <a href="subscribers.php">
-                <div class="btn">
-                    <h2>Newsletter subscribers</h2>
-                </div>
-            </a>
-            <a href="all_users.php">
-                <div class="btn">
-                    <h2>All users</h2>
-                </div>
-            </a>
-        </div>
-    </div>
-    
 
     <!-- footer section starts -->
 
