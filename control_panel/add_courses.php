@@ -4,16 +4,16 @@
 
 if(isset($_POST['submit'])){
 
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $age = mysqli_real_escape_string($conn, $_POST['age']);
-    $experience = mysqli_real_escape_string($conn, $_POST['experience']);
-    $jobs = mysqli_real_escape_string($conn, $_POST['jobs']);
-    $quality1 = mysqli_real_escape_string($conn, $_POST['quality1']);
-    $quality2 = mysqli_real_escape_string($conn, $_POST['quality2']);
-    $quality3 = mysqli_real_escape_string($conn, $_POST['quality3']);
+    $course = mysqli_real_escape_string($conn, $_POST['course']);
+    $requiremet1 = mysqli_real_escape_string($conn, $_POST['requiremet1']);
+    $requiremet2 = mysqli_real_escape_string($conn, $_POST['requiremet2']);
+    $requiremet3 = mysqli_real_escape_string($conn, $_POST['requiremet3']);
+    $requiremet4 = mysqli_real_escape_string($conn, $_POST['requiremet4']);
+    $fee = mysqli_real_escape_string($conn, $_POST['fee']);
+    $details = mysqli_real_escape_string($conn, $_POST['details']);
     $image = mysqli_real_escape_string($conn, $_POST['image']);
 
-    $insert = "INSERT INTO drivers(name, age, experience, jobs, quality1, quality2, quality3, image) VALUES('$name','$age','$experience','$jobs','$quality1','$quality2','$quality3','$image')";
+    $insert = "INSERT INTO courses(course, requiremet1, requiremet2, requiremet3, requiremet4, fee, details, image) VALUES('$course','$requiremet1','$requiremet2','$requiremet3','$requiremet4','$fee','$details','$image')";
     mysqli_query($conn, $insert);
     header('location:control_panel.php');
         
@@ -129,17 +129,17 @@ if(!isset($_SESSION['admin_name'])){
 
     <!-- header section ends  -->
 
-    <h1>Add Drivers!</h1>
+    <h1>Add Courses!</h1>
     <div class="add-container">
         <form action="" method="POST">
-        <input type="text" name="name" required placeholder="Enter driver name">
-        <input type="text" name="age" required placeholder="Enter driver age">
-        <input type="text" name="experience" required placeholder="Driver experience (Ex: 5 years)">
-        <input type="text" name="jobs" required placeholder="No. of jobs completed">
-        <input type="text" name="quality1" required placeholder="Driver quality">
-        <input type="text" name="quality2" required placeholder="Driver quality">
-        <input type="text" name="quality3" required placeholder="Driver quality">
-        <input type="text" name="image" required placeholder="Driver image (Ex: sumit.jpg/.jpeg/.png)"><br>
+        <input type="text" name="course" required placeholder="Enter Course name">
+        <input type="text" name="requirement1" required placeholder="course Requirements">
+        <input type="text" name="requirement2" required placeholder="course Requirements">
+        <input type="text" name="requirement3" required placeholder="course Requirements">
+        <input type="text" name="requirement4" required placeholder="course Requirements">
+        <input type="text" name="fee" required placeholder="Fees">
+        <input type="text" name="details" required placeholder="Course details">
+        <input type="text" name="image" required placeholder="Course cover (Ex: course-04.png)"><br>
         <input type="submit" name="submit" value="submit" class="btn">
         </form>
     </div>
