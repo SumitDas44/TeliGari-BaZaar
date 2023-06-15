@@ -158,13 +158,13 @@
                                 //print_r($row['name']);
                                 ?>
                                 <div class="profile-form-parts">
-                                    <input type="text" name="update_name" placeholder="Update your name" value="<?php echo $row['name']; ?>">
+                                    <input type="text" name="update_name" required placeholder="Update your name" value="<?php echo $row['name']; ?>">
                                 </div>
                                 <div class="profile-form-parts">
-                                    <input type="email" name="update_email" placeholder="update email" value="<?php echo $row['email']; ?>">
+                                    <input type="email" name="update_email" required placeholder="update email" value="<?php echo $row['email']; ?>">
                                 </div>
                                 <div class="profile-form-parts">
-                                    <input type="password" name="update_password" placeholder="update password" value="">
+                                    <input type="password" name="update_password" required placeholder="update password" value="">
                                 </div>
                                 <div class="profile-form-parts">
                                     <input type="submit" name="update" class="btn" value="update">
