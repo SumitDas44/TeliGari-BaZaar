@@ -1,35 +1,21 @@
 <?php
 
-@include 'config.php';
+    @include 'config.php';
 
-// Retrieve drives data from the database
-$sql = "SELECT * FROM drivers";
-$result = $conn->query($sql);
-
-// Store the drives data in an array
-$drives = array();
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $drives[] = $row;
+    session_start();
+    if(!isset($_SESSION['user_name'])){
+        header('location:index.php');
     }
-}
 
-$conn->close();
-
-session_start();
-if(!isset($_SESSION['admin_name'])){
-    header('location:index.php');
-}
 ?>
 
-<!-- HTML code to display the drives data -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Drivers!</title>
+    <title>TeliGari-BaZaar</title>
 
     <!-- swiper cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -37,38 +23,37 @@ if(!isset($_SESSION['admin_name'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="teligari_controller.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- header section starts -->
+    <!-- header section starts -->
 <header class="header">
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
-    <a href="admin_page.php" class="logo"><span>TeliGari</span>BaZaar</a>
+    <a href="#" class="logo"><span>TeliGari</span>BaZaar</a>
 
     <nav class="navbar">
-        <a href="admin_page.php#home">home</a>
-        <a href="admin_page.php#vehicles">vehicle</a>
-        <a href="admin_page.php#services">services</a>
-        <a href="admin_page.php#features">features</a>
-        <a href="admin_page.php#reviews">reviews</a>
-        <a href="admin_page.php#contact">contact</a>
+        <a href="user_page.php">home</a>
+        <a href="user_page.php#vehicles">vehicle</a>
+        <a href="user_page.php#services">services</a>
+        <a href="user_page.php#features">features</a>
+        <a href="user_page.php#reviews">reviews</a>
+        <a href="user_page.php#contact">contact</a>
     </nav>
     <div id="profile-btn" class="profile-btn-container">
         <div class="btn-wrapper">
         <button class="btn">
             <span>
                 <?php
-                    echo $_SESSION['admin_name'];
+                    echo $_SESSION['user_name'];
                 ?>
             </span>
         </button>
         <div class="dropdown">
             <ul>
                 <li>
-                    <a href="profile_admin.php">
+                    <a href="profile_user.php">
                     <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path class="svg-fill-primary" d="M50,8.9h-.13c-5.55,.03-10.76,2.23-14.67,6.18-3.9,3.96-6.03,9.19-6,14.75,.03,5.55,2.23,10.76,6.18,14.67,3.92,3.87,9.11,6,14.62,6h.13c5.55-.03,10.76-2.23,14.67-6.18,3.87-3.93,6-9.12,6-14.63v-.12c-.07-11.4-9.4-20.67-20.8-20.67Zm8.4,29.09c-2.22,2.24-5.18,3.49-8.33,3.51-3.12,.01-6.12-1.19-8.36-3.41-2.24-2.21-3.49-5.17-3.51-8.32s1.19-6.12,3.41-8.36c2.21-2.24,5.17-3.49,8.39-3.51,3.24,0,6.18,1.32,8.31,3.44,2.14,2.12,3.47,5.06,3.49,8.29,.02,3.15-1.19,6.12-3.4,8.36Z">
                     </path>
@@ -96,14 +81,25 @@ if(!isset($_SESSION['admin_name'])){
                     </a>
                 </li>
                 <li>
-                    <a href="control_panel/control_panel.php">
+                    <a href="">
                     <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path class="svg-fill-primary" d="M71.1,16.4h-5.07c-.62-1.82-1.65-3.49-3.07-4.87-2.37-2.32-5.5-3.55-8.76-3.53h-8.5c-5.44,0-10.06,3.52-11.73,8.4h-5.07c-6.89,0-12.5,5.61-12.5,12.5v50.7c0,6.84,5.56,12.4,12.4,12.4h42.4c6.77,0,12.32-5.46,12.4-12.3V28.9c0-6.89-5.61-12.5-12.5-12.5Zm-25.4-.4h8.6c1.16,0,2.25,.44,3.07,1.25,.84,.82,1.32,1.92,1.33,3.15,0,2.48-2.02,4.5-4.5,4.5h-8.4c-2.48,0-4.5-2.02-4.5-4.5,0-2.43,1.97-4.4,4.4-4.4Zm29.9,63.65c-.03,2.41-2,4.35-4.45,4.35H28.8c-2.43,0-4.4-1.97-4.4-4.4V28.9c0-2.48,2.02-4.5,4.5-4.5h5.07c1.67,4.93,6.34,8.5,11.83,8.5h8.4c5.49,0,10.16-3.57,11.83-8.5h5.07c2.48,0,4.5,2.02,4.5,4.5v50.75Z">
                     </path>
                     <path class="svg-fill-primary" d="M71.1,24.4h-5.07c-1.67,4.93-6.34,8.5-11.83,8.5h-8.4c-5.49,0-10.16-3.57-11.83-8.5h-5.07c-2.48,0-4.5,2.02-4.5,4.5v50.7c0,2.43,1.97,4.4,4.4,4.4h42.35c2.45,0,4.42-1.94,4.45-4.35V28.9c0-2.48-2.02-4.5-4.5-4.5Zm-5.57,28.43l-16.9,16.9c-.78,.78-1.81,1.17-2.83,1.17s-2.03-.38-2.81-1.15l-8.5-8.41c-1.57-1.55-1.59-4.08-.04-5.65,1.56-1.57,4.09-1.59,5.66-.03l5.67,5.6,14.09-14.09c1.56-1.56,4.1-1.56,5.66,0,1.56,1.56,1.56,4.1,0,5.66Z" opacity=".5">
                     </path>
                     </svg>
-                        <span>Control Panel</span>
+                        <span>Wishlist</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="FAQ.php">
+                    <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+                    <path class="svg-fill-primary" d="M75,15.7H25c-6.12,0-11.1,4.98-11.1,11.1v28.6c0,6.12,4.98,11.1,11.1,11.1h10.3v13.8c0,1.62,.97,3.08,2.47,3.7,.49,.2,1.01,.3,1.53,.3,1.04,0,2.06-.41,2.83-1.17l16.63-16.63h16.24c6.12,0,11.1-4.98,11.1-11.1V26.8c0-6.12-4.98-11.1-11.1-11.1Zm3.1,39.7c0,1.71-1.39,3.1-3.1,3.1h-17.9c-1.06,0-2.08,.42-2.83,1.17l-10.97,10.97v-8.14c0-2.21-1.79-4-4-4h-14.3c-1.71,0-3.1-1.39-3.1-3.1V26.8c0-1.71,1.39-3.1,3.1-3.1h50c1.71,0,3.1,1.39,3.1,3.1v28.6Z">
+                    </path>
+                    <path class="svg-fill-primary" d="M75,23.7H25c-1.71,0-3.1,1.39-3.1,3.1v28.6c0,1.71,1.39,3.1,3.1,3.1h14.3c2.21,0,4,1.79,4,4v8.14l10.97-10.97c.75-.75,1.77-1.17,2.83-1.17h17.9c1.71,0,3.1-1.39,3.1-3.1V26.8c0-1.71-1.39-3.1-3.1-3.1Zm-39.2,21.4c-2.21,0-4.05-1.79-4.05-4s1.74-4,3.95-4h.1c2.21,0,4,1.79,4,4s-1.79,4-4,4Zm17.03-1.17c-.75,.74-1.78,1.17-2.83,1.17s-2.08-.43-2.83-1.17c-.74-.74-1.17-1.78-1.17-2.83,0-.26,.03-.52,.08-.78s.13-.51,.23-.75,.22-.47,.36-.69c.15-.22,.32-.42,.5-.61,.75-.74,1.78-1.17,2.83-1.17s2.08,.43,2.83,1.17c.74,.75,1.17,1.78,1.17,2.83s-.43,2.08-1.17,2.83Zm15.39-2.05c-.05,.26-.13,.51-.23,.75-.1,.24-.22,.47-.36,.69-.15,.22-.32,.42-.5,.61-.75,.74-1.78,1.17-2.83,1.17s-2.09-.43-2.83-1.17c-.18-.19-.35-.39-.5-.61-.14-.22-.26-.45-.36-.69-.1-.24-.18-.49-.23-.75-.06-.26-.08-.52-.08-.78s.02-.52,.08-.78c.05-.26,.13-.51,.23-.75,.1-.24,.22-.47,.36-.69,.15-.22,.32-.42,.5-.61,.75-.74,1.78-1.17,2.83-1.17s2.08,.43,2.83,1.17c.18,.19,.35,.39,.5,.61,.14,.22,.26,.45,.36,.69,.1,.24,.18,.49,.23,.75,.05,.26,.08,.52,.08,.78s-.03,.52-.08,.78Z" opacity=".5">
+                    </path>
+                    </svg>
+                    <span>FAQ</span>
                     </a>
                 </li>
                 <li>
@@ -124,32 +120,78 @@ if(!isset($_SESSION['admin_name'])){
 </header>
     <!-- header section ends  -->
 
-    
-    <h1>Hire our expert Drivers!</h1>
-    
-    <div class="driver-container">
-    <?php foreach ($drives as $driver): ?>
-        <div class="drivers">
-            <div class="content">
-                <div class="sub-content">
-                <img src="images/drivers/<?php echo $driver['image']; ?>" alt="">
-                </div>
-                <div class="sub-content">
-                <h3><?php echo $driver['name']; ?></h3>
-                <h4>Age: <?php echo $driver['age']; ?></h4>
-                <h4>Experience: <?php echo $driver['experience']; ?></h4>
-                <h4>Jobs completed: <?php echo $driver['jobs']; ?></h4>
-                <h4><i class="fas fa-star"></i> <?php echo $driver['quality1']; ?></h4>
-                <h4><i class="fas fa-star"></i> <?php echo $driver['quality2']; ?></h4>
-                <h4><i class="fas fa-star"></i> <?php echo $driver['quality3']; ?></h4>
-                <a href="#" class="btn">Hire now!</a>
-                </div>
-            </div>
+    <!-- profile section starts -->
+
+    <div class="profile">
+        <div class="update_profile">
+            <h2>Update User Profile</h2>
+            <?php
+                if(isset($_GET['success'])){
+                    if($_GET['success'] == 'userUpdated'){
+                        ?>
+                        <small style="margin: 10px 0;
+                        display: block;
+                        background-color: cyan;
+                        color: black;
+                        border-radius: 5px;
+                        font-size: 15px;
+                        padding: 5px;
+                        text-align: center;">User Updated Successfully!</small>
+                    <?php
+                   }
+                }
+
+                if(isset($_GET['error'])){
+                    
+                    if($_GET['error'] == 'emptyNameAndEmail'){
+                        ?>
+                        <small style="margin: 10px 0;
+                        display: block;
+                        background-color: crimson;
+                        color: #fff;
+                        border-radius: 5px;
+                        font-size: 15px;
+                        padding: 5px;
+                        text-align: center;">Name, email & password is required</small>
+                    <?php
+                    }
+                }
+            ?>
+            <form action="profile_update_user.php" method = "POST">
+                <?php
+                    $current_user = $_SESSION['user_name'];
+                    $sql = "SELECT * FROM user_form WHERE name ='$current_user'";
+                
+                    $result = mysqli_query($conn,$sql);
+                    if($result){
+                        if(mysqli_num_rows($result) > 0){
+                            while($row = mysqli_fetch_array($result)){
+                                //print_r($row['name']);
+                                ?>
+                                <div class="profile-form-parts">
+                                    <input type="text" name="update_name" placeholder="Update your name" value="<?php echo $row['name']; ?>">
+                                </div>
+                                <div class="profile-form-parts">
+                                    <input type="email" name="update_email" placeholder="update email" value="<?php echo $row['email']; ?>">
+                                </div>
+                                <div class="profile-form-parts">
+                                    <input type="password" name="update_password" placeholder="update password" value="">
+                                </div>
+                                <div class="profile-form-parts">
+                                    <input type="submit" name="update" class="btn" value="update">
+                                </div>
+                                <?php
+                            }
+                        }
+                    }
+                ?>
+                
+            </form>
         </div>
-            <?php endforeach; ?>
     </div>
 
-    <!-- footer section starts -->
+    <!-- profile section ends -->
+
 
     <section class="footer">
         <div class="box-container">
@@ -193,6 +235,8 @@ if(!isset($_SESSION['admin_name'])){
     </section>
 
     <!-- footer section ends -->
+
+
 
     <!-- swiper js link -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

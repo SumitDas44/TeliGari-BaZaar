@@ -76,7 +76,7 @@
         <div class="dropdown">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="profile_admin.php">
                     <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path class="svg-fill-primary" d="M50,8.9h-.13c-5.55,.03-10.76,2.23-14.67,6.18-3.9,3.96-6.03,9.19-6,14.75,.03,5.55,2.23,10.76,6.18,14.67,3.92,3.87,9.11,6,14.62,6h.13c5.55-.03,10.76-2.23,14.67-6.18,3.87-3.93,6-9.12,6-14.63v-.12c-.07-11.4-9.4-20.67-20.8-20.67Zm8.4,29.09c-2.22,2.24-5.18,3.49-8.33,3.51-3.12,.01-6.12-1.19-8.36-3.41-2.24-2.21-3.49-5.17-3.51-8.32s1.19-6.12,3.41-8.36c2.21-2.24,5.17-3.49,8.39-3.51,3.24,0,6.18,1.32,8.31,3.44,2.14,2.12,3.47,5.06,3.49,8.29,.02,3.15-1.19,6.12-3.4,8.36Z">
                     </path>
@@ -192,7 +192,7 @@
                             <span class="fas fa-circle"></span> Gasoline <br>
                             <span class="fas fa-circle"></span> 330kmph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="explore_cars_admin.php" class="btn">check out</a>
                     </div>
                 </div>
                 <div class="swiper-slide box">
@@ -206,7 +206,7 @@
                             <span class="fas fa-circle"></span> Gasoline
                             <span class="fas fa-circle"></span> 352kmph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="explore_cars_admin.php" class="btn">check out</a>
                     </div>
                 </div>
                 <div class="swiper-slide box">
@@ -221,7 +221,7 @@
                             <span class="fas fa-circle"></span> Diesel <br>
                             <span class="fas fa-circle"></span> 128.84kmph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="explore_cars_admin.php" class="btn">check out</a>
                     </div>
                 </div>
                 <div class="swiper-slide box">
@@ -236,7 +236,7 @@
                             <span class="fas fa-circle"></span> Diesel
                             <span class="fas fa-circle"></span> 185kmph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="explore_cars_admin.php" class="btn">check out</a>
                     </div>
                 </div>
                 <div class="swiper-slide box">
@@ -251,7 +251,7 @@
                             <span class="fas fa-circle"></span> Gasoline
                             <span class="fas fa-circle"></span> 165mph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="explore_cars_admin.php" class="btn">check out</a>
                     </div>
                 </div>
                 <div class="swiper-slide box">
@@ -265,7 +265,7 @@
                             <span class="fas fa-circle"></span> Diesel
                             <span class="fas fa-circle"></span> 117mph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="explore_cars_admin.php" class="btn">check out</a>
                     </div>
                 </div>
                 <div class="swiper-slide box">
@@ -280,7 +280,7 @@
                             <span class="fas fa-circle"></span> gasoline<br>
                             <span class="fas fa-circle"></span> 160.21kmph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="explore_cars_admin.php" class="btn">check out</a>
                     </div>
                 </div>
                 <div class="swiper-slide box">
@@ -295,7 +295,7 @@
                             <span class="fas fa-circle"></span> Gasoline<br>
                             <span class="fas fa-circle"></span> 250kmph
                         </p>
-                        <a href="#" class="btn">check out</a>
+                        <a href="explore_cars_admin.php" class="btn">check out</a>
                     </div>
                 </div>
             </div>
@@ -380,7 +380,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$94,990/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
                 <div class="swiper-slide box">
                     <img src="images/car-10.png" alt="">
@@ -393,7 +393,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$93,290/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
                 <div class="swiper-slide box">
                     <img src="images/car-11.png" alt="">
@@ -406,7 +406,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$42,030/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
                 <div class="swiper-slide box">
                     <img src="images/car-12.png" alt="">
@@ -419,7 +419,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$500,000/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
                 <div class="swiper-slide box">
                     <img src="images/car-13.png" alt="">
@@ -432,7 +432,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$498,250/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
                 <div class="swiper-slide box">
                     <img src="images/car-14.png" alt="">
@@ -445,7 +445,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$400,000/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -464,7 +464,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$142,100/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
                 <div class="swiper-slide box">
                     <img src="images/car-16.png" alt="">
@@ -477,7 +477,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$113,000/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
                 <div class="swiper-slide box">
                     <img src="images/car-17.png" alt="">
@@ -490,7 +490,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$98,900/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
                 <div class="swiper-slide box">
                     <img src="images/car-18.png" alt="">
@@ -503,7 +503,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$79,200/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
                 <div class="swiper-slide box">
                     <img src="images/car-19.png" alt="">
@@ -516,7 +516,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$79,090/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
                 <div class="swiper-slide box">
                     <img src="images/car-20.png" alt="">
@@ -529,7 +529,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="price">$15,530/-</div>
-                    <a href="#" class="btn">check out</a>
+                    <a href="explore_cars_admin.php" class="btn">check out</a>
                 </div>
             </div>
             <div class="swiper-pagination"></div>

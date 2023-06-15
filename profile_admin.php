@@ -1,35 +1,21 @@
 <?php
 
-@include 'config.php';
+    @include 'config.php';
 
-// Retrieve drives data from the database
-$sql = "SELECT * FROM drivers";
-$result = $conn->query($sql);
-
-// Store the drives data in an array
-$drives = array();
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $drives[] = $row;
+    session_start();
+    if(!isset($_SESSION['admin_name'])){
+        header('location:index.php');
     }
-}
 
-$conn->close();
-
-session_start();
-if(!isset($_SESSION['admin_name'])){
-    header('location:index.php');
-}
 ?>
 
-<!-- HTML code to display the drives data -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Drivers!</title>
+    <title>TeliGari-BaZaar</title>
 
     <!-- swiper cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -37,19 +23,18 @@ if(!isset($_SESSION['admin_name'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="teligari_controller.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- header section starts -->
+    <!-- header section starts -->
 <header class="header">
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
-    <a href="admin_page.php" class="logo"><span>TeliGari</span>BaZaar</a>
+    <a href="#" class="logo"><span>TeliGari</span>BaZaar</a>
 
     <nav class="navbar">
-        <a href="admin_page.php#home">home</a>
+        <a href="admin_page.php">home</a>
         <a href="admin_page.php#vehicles">vehicle</a>
         <a href="admin_page.php#services">services</a>
         <a href="admin_page.php#features">features</a>
@@ -124,32 +109,78 @@ if(!isset($_SESSION['admin_name'])){
 </header>
     <!-- header section ends  -->
 
-    
-    <h1>Hire our expert Drivers!</h1>
-    
-    <div class="driver-container">
-    <?php foreach ($drives as $driver): ?>
-        <div class="drivers">
-            <div class="content">
-                <div class="sub-content">
-                <img src="images/drivers/<?php echo $driver['image']; ?>" alt="">
-                </div>
-                <div class="sub-content">
-                <h3><?php echo $driver['name']; ?></h3>
-                <h4>Age: <?php echo $driver['age']; ?></h4>
-                <h4>Experience: <?php echo $driver['experience']; ?></h4>
-                <h4>Jobs completed: <?php echo $driver['jobs']; ?></h4>
-                <h4><i class="fas fa-star"></i> <?php echo $driver['quality1']; ?></h4>
-                <h4><i class="fas fa-star"></i> <?php echo $driver['quality2']; ?></h4>
-                <h4><i class="fas fa-star"></i> <?php echo $driver['quality3']; ?></h4>
-                <a href="#" class="btn">Hire now!</a>
-                </div>
-            </div>
+    <!-- profile section starts -->
+
+    <div class="profile">
+        <div class="update_profile">
+            <h2>Update Admin Profile</h2>
+            <?php
+                if(isset($_GET['success'])){
+                    if($_GET['success'] == 'userUpdated'){
+                        ?>
+                        <small style="margin: 10px 0;
+                        display: block;
+                        background-color: cyan;
+                        color: black;
+                        border-radius: 5px;
+                        font-size: 15px;
+                        padding: 5px;
+                        text-align: center;">Admin Updated Successfully!</small>
+                    <?php
+                   }
+                }
+
+                if(isset($_GET['error'])){
+                    
+                    if($_GET['error'] == 'emptyNameAndEmail'){
+                        ?>
+                        <small style="margin: 10px 0;
+                        display: block;
+                        background-color: crimson;
+                        color: #fff;
+                        border-radius: 5px;
+                        font-size: 15px;
+                        padding: 5px;
+                        text-align: center;">Name, email & password is required</small>
+                    <?php
+                    }
+                }
+            ?>
+            <form action="profile_update_admin.php" method = "POST">
+                <?php
+                    $current_user = $_SESSION['admin_name'];
+                    $sql = "SELECT * FROM user_form WHERE name ='$current_user'";
+                
+                    $result = mysqli_query($conn,$sql);
+                    if($result){
+                        if(mysqli_num_rows($result) > 0){
+                            while($row = mysqli_fetch_array($result)){
+                                //print_r($row['name']);
+                                ?>
+                                <div class="profile-form-parts">
+                                    <input type="text" name="update_name" placeholder="Update your name" value="<?php echo $row['name']; ?>">
+                                </div>
+                                <div class="profile-form-parts">
+                                    <input type="email" name="update_email" placeholder="update email" value="<?php echo $row['email']; ?>">
+                                </div>
+                                <div class="profile-form-parts">
+                                    <input type="password" name="update_password" placeholder="update password" value="">
+                                </div>
+                                <div class="profile-form-parts">
+                                    <input type="submit" name="update" class="btn" value="update">
+                                </div>
+                                <?php
+                            }
+                        }
+                    }
+                ?>
+                
+            </form>
         </div>
-            <?php endforeach; ?>
     </div>
 
-    <!-- footer section starts -->
+    <!-- profile section ends -->
+
 
     <section class="footer">
         <div class="box-container">
@@ -193,6 +224,8 @@ if(!isset($_SESSION['admin_name'])){
     </section>
 
     <!-- footer section ends -->
+
+
 
     <!-- swiper js link -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

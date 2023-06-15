@@ -6,6 +6,7 @@
     --black: #130f40;
     --light-color: #666;
     --cream: #ee8d8d;
+    --change: rgb(187, 254, 254);
     --red: #ea3030;
     --border: .1rem solid rgba(0, 0, 0, 0.139);
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.251);
@@ -313,6 +314,48 @@ section{
     border-radius: 5px;
     font-size: 20px;
     padding: 10px;
+}
+
+.profile{
+    padding-top: 10rem;
+}
+.profile .update_profile{
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    margin-left: 20rem;
+    width: 70%;
+    display: grid;
+    gap: 1rem;
+}
+.profile .update_profile h2{
+    display: flex;
+    font-size: 4rem;
+    justify-content: center;
+    color: var(--cream);
+}
+.profile .update_profile form{
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+}
+.profile .update_profile form:hover{
+    background: var(--change);
+}
+.profile-form-parts{
+    padding: .5rem;
+    font-size: 2rem;
+}
+.profile-form-parts input{
+    width: 50%;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    text-transform: none;
 }
 
 .insurance-form-container{
