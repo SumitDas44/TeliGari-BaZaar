@@ -199,6 +199,21 @@ h1{
     cursor: pointer;
     padding: 0.8rem 3rem;
 }
+.delete-btn,
+.option-btn{
+   display: inline-block;
+   padding:10px 30px;
+   cursor: pointer;
+   font-size: 18px;
+   color:var(--white);
+   border-radius: 5px;
+   text-transform: capitalize;
+}
+.delete-btn:hover,
+.option-btn:hover{
+   background-color: var(--black);
+}
+
 .car-container .content .btn{
     align-content: end;
 }

@@ -121,7 +121,7 @@ if(!isset($_SESSION['admin_name'])){
                 <img src="images/<?php echo $bat['image']; ?>" alt="">
                 <h3><?php echo $bat['name']; ?></h3>
                 <h4><?php echo $bat['capacity']; ?></h4>
-                <div class="price"><?php echo $bat['price']; ?></div>
+                <div class="price">$<?php echo $bat['price']; ?></div>
                 <p>
                     <?php echo $bat['details']; ?>
                </p>

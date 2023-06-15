@@ -152,7 +152,7 @@ if(!isset($_SESSION['user_name'])){
                 </ul>
             </div>
             <div class="segment">
-                <p class="price"><?php echo $part['price']; ?></p>
+                <p class="price">$<?php echo $part['price']; ?></p>
                 <a href="" class="btn">Browse</a>
             </div>
         </div>

@@ -146,7 +146,7 @@ if(!isset($_SESSION['user_name'])){
                 <h4><?php echo $course['requirement2']; ?></h4>
                 <h4><?php echo $course['requirement3']; ?></h4>
                 <h4><?php echo $course['requirement4']; ?></h4>
-                <div class="price"><?php echo $course['fee']; ?></div>
+                <div class="price">$<?php echo $course['fee']; ?></div>
                 <p>
                     <?php echo $course['details']; ?>
                </p>

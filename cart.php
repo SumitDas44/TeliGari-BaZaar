@@ -2,15 +2,15 @@
 
 @include 'config.php';
 
-// Retrieve battery data from the database
-$sql = "SELECT * FROM battery";
+// Retrieve car_parts data from the database
+$sql = "SELECT * FROM car_parts";
 $result = $conn->query($sql);
 
-// Store the battery data in an array
-$battery = array();
+// Store the car_parts data in an array
+$parts = array();
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $battery[] = $row;
+        $parts[] = $row;
     }
 }
 
@@ -22,14 +22,14 @@ if(!isset($_SESSION['user_name'])){
 }
 ?>
 
-<!-- HTML code to display the battery data -->
+<!-- HTML code to display the car_parts data -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Batteries!</title>
+    <title>Car Parts</title>
 
     <!-- swiper cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -53,8 +53,8 @@ if(!isset($_SESSION['user_name'])){
         <a href="user_page.php#vehicles">vehicle</a>
         <a href="user_page.php#services">services</a>
         <a href="user_page.php#features">features</a>
-        <a href="user_page.php#contact">contact</a>
         <a href="user_page.php#reviews">reviews</a>
+        <a href="user_page.php#contact">contact</a>
     </nav>
     <div id="profile-btn" class="profile-btn-container">
         <div class="btn-wrapper">
@@ -83,7 +83,7 @@ if(!isset($_SESSION['user_name'])){
                     </a>
                 </li>
                 <li>
-                    <a href="cart.php">
+                    <a href="">
                     <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path class="svg-fill-primary" d="M67.6,57.5c1.51,0,2.9-.85,3.57-2.21l14.11-28.1c.62-1.24,.55-2.71-.18-3.89-.72-1.18-2.01-1.9-3.4-1.9H30.09l-.77-3.87c-.37-1.88-2.01-3.23-3.92-3.23h-7.1c-2.21,0-4,1.79-4,4s1.79,4,4,4h3.81l.75,3.8c.01,.06,.02,.11,.03,.16l5.17,25.92-6.56,6.56c-2.95,2.9-3,7.65-.11,10.61,.29,.3,.61,.57,.94,.81-.6,1.36-.93,2.86-.93,4.44,0,6.07,4.93,11,11,11s11-4.93,11-11c0-1.04-.15-2.05-.42-3h14.04c-.28,.95-.42,1.96-.42,3,0,6.07,4.93,11,11,11s11-4.93,11-11-4.93-11-11-11H27.96l6.1-6.1h33.54Zm0,14.1c1.65,0,3,1.35,3,3s-1.35,3-3,3-3-1.35-3-3,1.35-3,3-3Zm-35.2,0c1.65,0,3,1.35,3,3s-1.35,3-3,3-3-1.35-3-3,1.35-3,3-3ZM75.22,29.4l-10.09,20.1h-29.45l-4-20.1h43.54Z">
                     </path>
@@ -134,25 +134,7 @@ if(!isset($_SESSION['user_name'])){
     <!-- header section ends  -->
 
     
-    <h1>Replace or Buy Batteries, remove worries!</h1>
     
-    <div class="battery-container">
-    <?php foreach ($battery as $bat): ?>
-        <div class="batteries">
-            <div class="content">
-                <img src="images/<?php echo $bat['image']; ?>" alt="">
-                <h3><?php echo $bat['name']; ?></h3>
-                <h4><?php echo $bat['capacity']; ?></h4>
-                <div class="price">$<?php echo $bat['price']; ?></div>
-                <p>
-                    <?php echo $bat['details']; ?>
-               </p>
-                <a href="#" class="btn">Buy now!</a>
-            </div>
-        </div>
-            <?php endforeach; ?>
-    </div>
-
     <!-- footer section starts -->
 
     <section class="footer">

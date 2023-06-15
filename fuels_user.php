@@ -143,7 +143,7 @@ if(!isset($_SESSION['user_name'])){
                 <img src="images/<?php echo $fuel['image']; ?>" alt="">
                 <h3><?php echo $fuel['name']; ?></h3>
                 <h4><?php echo $fuel['compatibility']; ?></h4>
-                <div class="price"><?php echo $fuel['price']; ?></div>
+                <div class="price">$<?php echo $fuel['price']; ?>/litre</div>
                 <p>
                     <?php echo $fuel['details']; ?>
                </p>
