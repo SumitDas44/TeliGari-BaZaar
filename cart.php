@@ -2,24 +2,48 @@
 
 @include 'config.php';
 
-// Retrieve car_parts data from the database
-$sql = "SELECT * FROM car_parts";
-$result = $conn->query($sql);
-
-// Store the car_parts data in an array
-$parts = array();
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $parts[] = $row;
-    }
-}
-
-$conn->close();
-
 session_start();
 if(!isset($_SESSION['user_name'])){
     header('location:index.php');
 }
+$user_id = 0;
+if(isset($_POST['add_to_cart'])){
+
+    $product_name = $_POST['product_name'];
+    $product_price = $_POST['product_price'];
+    $product_image = $_POST['product_image'];
+    $product_quantity = $_POST['product_quantity'];
+    $user_id = $_POST['user_id'];
+
+    $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'")
+    or die('query failed');
+
+    if(mysqli_num_rows($select_cart) > 0){
+        $message[] = 'product already added to cart!';
+     }else{
+        mysqli_query($conn, "INSERT INTO `cart`(user_id, name, price, image, quantity) VALUES('$user_id', '$product_name', '$product_price', '$product_image', '$product_quantity')") or die('query failed');
+        $message[] = 'product added to cart!';
+     }
+  };
+
+  if(isset($_POST['update_cart'])){
+    $update_quantity = $_POST['cart_quantity'];
+    $update_id = $_POST['cart_id'];
+    mysqli_query($conn, "UPDATE `cart` SET quantity = '$update_quantity' WHERE ID = '$update_id'") or die('query_failed');
+    $message[] = 'cart quantity updated successfully!';
+  }
+
+if(isset($_GET['remove'])){
+    $remove_id = $_GET['remove'];
+    mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'") or die('query failed');
+    header('location:cart.php');
+}
+
+if(isset($_GET['delete_all'])){
+    mysqli_query($conn, "UPDATE `cart` SET user_id = '$user_id'") or die('query_failed');
+    header('location:cart.php');
+}
+
 ?>
 
 <!-- HTML code to display the car_parts data -->
@@ -83,7 +107,7 @@ if(!isset($_SESSION['user_name'])){
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="cart.php">
                     <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path class="svg-fill-primary" d="M67.6,57.5c1.51,0,2.9-.85,3.57-2.21l14.11-28.1c.62-1.24,.55-2.71-.18-3.89-.72-1.18-2.01-1.9-3.4-1.9H30.09l-.77-3.87c-.37-1.88-2.01-3.23-3.92-3.23h-7.1c-2.21,0-4,1.79-4,4s1.79,4,4,4h3.81l.75,3.8c.01,.06,.02,.11,.03,.16l5.17,25.92-6.56,6.56c-2.95,2.9-3,7.65-.11,10.61,.29,.3,.61,.57,.94,.81-.6,1.36-.93,2.86-.93,4.44,0,6.07,4.93,11,11,11s11-4.93,11-11c0-1.04-.15-2.05-.42-3h14.04c-.28,.95-.42,1.96-.42,3,0,6.07,4.93,11,11,11s11-4.93,11-11-4.93-11-11-11H27.96l6.1-6.1h33.54Zm0,14.1c1.65,0,3,1.35,3,3s-1.35,3-3,3-3-1.35-3-3,1.35-3,3-3Zm-35.2,0c1.65,0,3,1.35,3,3s-1.35,3-3,3-3-1.35-3-3,1.35-3,3-3ZM75.22,29.4l-10.09,20.1h-29.45l-4-20.1h43.54Z">
                     </path>
@@ -91,17 +115,6 @@ if(!isset($_SESSION['user_name'])){
                     </polygon>
                     </svg>
                     <span>Cart</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                    <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
-                    <path class="svg-fill-primary" d="M71.1,16.4h-5.07c-.62-1.82-1.65-3.49-3.07-4.87-2.37-2.32-5.5-3.55-8.76-3.53h-8.5c-5.44,0-10.06,3.52-11.73,8.4h-5.07c-6.89,0-12.5,5.61-12.5,12.5v50.7c0,6.84,5.56,12.4,12.4,12.4h42.4c6.77,0,12.32-5.46,12.4-12.3V28.9c0-6.89-5.61-12.5-12.5-12.5Zm-25.4-.4h8.6c1.16,0,2.25,.44,3.07,1.25,.84,.82,1.32,1.92,1.33,3.15,0,2.48-2.02,4.5-4.5,4.5h-8.4c-2.48,0-4.5-2.02-4.5-4.5,0-2.43,1.97-4.4,4.4-4.4Zm29.9,63.65c-.03,2.41-2,4.35-4.45,4.35H28.8c-2.43,0-4.4-1.97-4.4-4.4V28.9c0-2.48,2.02-4.5,4.5-4.5h5.07c1.67,4.93,6.34,8.5,11.83,8.5h8.4c5.49,0,10.16-3.57,11.83-8.5h5.07c2.48,0,4.5,2.02,4.5,4.5v50.75Z">
-                    </path>
-                    <path class="svg-fill-primary" d="M71.1,24.4h-5.07c-1.67,4.93-6.34,8.5-11.83,8.5h-8.4c-5.49,0-10.16-3.57-11.83-8.5h-5.07c-2.48,0-4.5,2.02-4.5,4.5v50.7c0,2.43,1.97,4.4,4.4,4.4h42.35c2.45,0,4.42-1.94,4.45-4.35V28.9c0-2.48-2.02-4.5-4.5-4.5Zm-5.57,28.43l-16.9,16.9c-.78,.78-1.81,1.17-2.83,1.17s-2.03-.38-2.81-1.15l-8.5-8.41c-1.57-1.55-1.59-4.08-.04-5.65,1.56-1.57,4.09-1.59,5.66-.03l5.67,5.6,14.09-14.09c1.56-1.56,4.1-1.56,5.66,0,1.56,1.56,1.56,4.1,0,5.66Z" opacity=".5">
-                    </path>
-                    </svg>
-                        <span>Wishlist</span>
                     </a>
                 </li>
                 <li>
@@ -133,7 +146,60 @@ if(!isset($_SESSION['user_name'])){
 </header>
     <!-- header section ends  -->
 
-    
+    <!-- shopping car starts -->
+
+    <div class="shopping-cart">
+        <h1 class="heading">Shopping Cart</h1>
+        <table>
+            <thead>
+                <th>image</th>
+                <th>name</th>
+                <th>price</th>
+                <th>quantity</th>
+                <th>total price</th>
+                <th>action</th>
+            </thead>
+            <tbody>
+            <?php
+            $grand_total = 0;
+                $cart_query = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
+                if(mysqli_num_rows($cart_query) > 0){
+                    while($fetch_cart = mysqli_fetch_assoc($cart_query)){
+            ?>
+                <tr>
+                    <td><img src="images/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
+                    <td><?php echo $fetch_cart['name']; ?></td>
+                    <td>$<?php echo $fetch_cart['price']; ?></td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['ID']; ?>">
+                            <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
+                            <input type="submit" name="update_cart" value="update" class="option-btn">
+                        </form>
+                    </td>
+                    <td>$<?php echo $sub_total = $fetch_cart['price'] * $fetch_cart['quantity']; ?></td>
+                    <td><a href="cart.php?remove=<?php echo $fetch_cart['ID']; ?>" class="delete-btn" onclick="return confirm('remove item from cart?');">remove</a></td>
+                </tr>
+            <?php
+                $grand_total += $sub_total;
+                    };
+                }else{
+                    echo '<tr><td style="padding: 20px; text-transform: capitalize;" colspan="6">No item added</td></tr>';
+                }
+            ?>
+            <tr class="table-bottom">
+                <td colspan="4">Grand Total :</td>
+                <td>$<?php echo $grand_total ?></td>
+                <td><a href="cart.php?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">delete all</a></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="cart-btn">
+            <a href="#" class="btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">proceed to checkout</a>
+        </div>
+    </div>
+
+    <!-- shopping cart ends -->
     
     <!-- footer section starts -->
 

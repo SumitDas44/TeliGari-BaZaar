@@ -7,7 +7,7 @@
     --light-color: #666;
     --cream: #ee8d8d;
     --red: #ea3030;
-    --change: rgb(187, 254, 254);
+    --change: rgb(156, 249, 249);
     --border: .1rem solid rgba(0, 0, 0, 0.139);
     --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.251);
 }
@@ -199,19 +199,80 @@ h1{
     cursor: pointer;
     padding: 0.8rem 3rem;
 }
+.shopping-cart{
+    padding: 0;
+    justify-content: center;
+}
+.shopping-cart table{
+    margin-left: 7rem;
+    width: 90%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+}
+.shopping-cart table thead{
+    background-color: var(--black);
+}
+.shopping-cart table thead th{
+    padding: 10px;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+.shopping-cart table .table-bottom{
+    background-color: var(--light-color);
+}
+.shopping-cart table tr td{
+    padding: 10px;
+    font-size: 20px;
+    color: var(--black);
+}
+.shopping-cart table tr td:nth-child(1){
+    padding: 0;
+}
+.shopping-cart table tr td input[type="number"]{
+    width: 80px;
+    border: 2px solid var(--black);
+}
+.shopping-cart .cart-btn{
+    margin-top: 10px;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.shopping-cart .disabled{
+    pointer-events: none;
+    background-color: var(--red);
+    opacity: .5;
+    user-select: none;
+}
+
 .delete-btn,
 .option-btn{
    display: inline-block;
    padding:10px 30px;
    cursor: pointer;
    font-size: 18px;
-   color:var(--white);
+   color:var(--black);
+   background-color: var(--cream);
    border-radius: 5px;
    text-transform: capitalize;
 }
 .delete-btn:hover,
 .option-btn:hover{
-   background-color: var(--black);
+   background-color: var(--red);
+}
+
+input[type="number"]{
+    margin: 10px 0;
+    width: 90%;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: var(--black);
+    padding: 0.5rem 1rem;
 }
 
 .car-container .content .btn{
@@ -464,4 +525,23 @@ h1{
     padding-top: 2.5rem;
     margin-top: 2rem;
     font-size: 2rem;
+}
+
+@media (max-width:1200px){
+    .shopping-cart{
+        overflow-x: scroll;
+    }
+    .shopping-cart table{
+        width: 1000px;
+    }
+}
+
+@media (max-width: 450px){
+    .heading{
+        font-size: 30px;
+    }
+    img{
+        height: 200px;
+    }
+
 }
