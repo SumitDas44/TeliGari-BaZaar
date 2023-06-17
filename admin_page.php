@@ -6,6 +6,15 @@
     if(!isset($_SESSION['admin_name'])){
         header('location:index.php');
     }
+    if(isset($_SESSION['admin_name'])){
+        if((time() - $_SESSION['last_time']) > 60){
+            header('location:logout.php');
+        }else{
+            $_SESSION['last_time'] = time();
+        }
+    }else{
+        header('location:login_form.php');
+    }
 
     //newsletter update codes
     if(isset($_POST['submit'])){
