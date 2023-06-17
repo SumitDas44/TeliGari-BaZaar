@@ -6,25 +6,10 @@ session_start();
 if(!isset($_SESSION['user_name'])){
     header('location:index.php');
 }
-$user_id = 0;
-if(isset($_POST['add_to_cart'])){
 
-    $product_name = $_POST['product_name'];
-    $product_price = $_POST['product_price'];
-    $product_image = $_POST['product_image'];
-    $product_quantity = $_POST['product_quantity'];
-    $user_id = $_POST['user_id'];
+ $user_id = $_SESSION['user_id'];
 
-    $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'")
-    or die('query failed');
-
-    if(mysqli_num_rows($select_cart) > 0){
-        $message[] = 'product already added to cart!';
-     }else{
-        mysqli_query($conn, "INSERT INTO `cart`(user_id, name, price, image, quantity) VALUES('$user_id', '$product_name', '$product_price', '$product_image', '$product_quantity')") or die('query failed');
-        $message[] = 'product added to cart!';
-     }
-  };
+// $user_id = 0;
 
   if(isset($_POST['update_cart'])){
     $update_quantity = $_POST['cart_quantity'];
@@ -40,7 +25,7 @@ if(isset($_GET['remove'])){
 }
 
 if(isset($_GET['delete_all'])){
-    mysqli_query($conn, "UPDATE `cart` SET user_id = '$user_id'") or die('query_failed');
+    mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query_failed');
     header('location:cart.php');
 }
 

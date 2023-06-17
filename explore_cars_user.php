@@ -14,7 +14,7 @@ if ($result->num_rows > 0) {
     }
 }
 
-$conn->close();
+// $conn->close();
 
 session_start();
 
@@ -30,6 +30,25 @@ if (isset($_SESSION['user_id'])) {
                 } else {
                         echo "User ID not found in session.";
                         }
+                        
+if(isset($_POST['add_to_cart'])){
+
+    $product_name = $_POST['product_name'];
+    $product_price = $_POST['product_price'];
+    $product_image = $_POST['product_image'];
+    $product_quantity = $_POST['product_quantity'];
+    $user_id = $_SESSION['user_id'];
+
+    $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'")
+    or die('query failed');
+
+    if(mysqli_num_rows($select_cart) > 0){
+        $message[] = 'product already added to cart!';
+     }else{
+        mysqli_query($conn, "INSERT INTO `cart`(user_id, name, price, image, quantity) VALUES('$user_id', '$product_name', '$product_price', '$product_image', '$product_quantity')") or die('query failed');
+        $message[] = 'product added to cart!';
+     }
+  };
 
 ?>
 
@@ -94,7 +113,7 @@ if (isset($_SESSION['user_id'])) {
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="cart.php">
                     <svg class="svg-snoweb svg-theme-dark" height="20" preserveaspectratio="xMidYMid meet" viewbox="0 0 100 100" width="20" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path class="svg-fill-primary" d="M67.6,57.5c1.51,0,2.9-.85,3.57-2.21l14.11-28.1c.62-1.24,.55-2.71-.18-3.89-.72-1.18-2.01-1.9-3.4-1.9H30.09l-.77-3.87c-.37-1.88-2.01-3.23-3.92-3.23h-7.1c-2.21,0-4,1.79-4,4s1.79,4,4,4h3.81l.75,3.8c.01,.06,.02,.11,.03,.16l5.17,25.92-6.56,6.56c-2.95,2.9-3,7.65-.11,10.61,.29,.3,.61,.57,.94,.81-.6,1.36-.93,2.86-.93,4.44,0,6.07,4.93,11,11,11s11-4.93,11-11c0-1.04-.15-2.05-.42-3h14.04c-.28,.95-.42,1.96-.42,3,0,6.07,4.93,11,11,11s11-4.93,11-11-4.93-11-11-11H27.96l6.1-6.1h33.54Zm0,14.1c1.65,0,3,1.35,3,3s-1.35,3-3,3-3-1.35-3-3,1.35-3,3-3Zm-35.2,0c1.65,0,3,1.35,3,3s-1.35,3-3,3-3-1.35-3-3,1.35-3,3-3ZM75.22,29.4l-10.09,20.1h-29.45l-4-20.1h43.54Z">
                     </path>
@@ -156,8 +175,8 @@ if (isset($_SESSION['user_id'])) {
             </div>
             <div class="segment">
                 <p class="price">$<?php echo $car['price']; ?></p>
-                <form action="cart.php" method="post">
-                <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>">
+                <form action="" method="post">
+                <!-- <input type="hidden" name="user_id" value="<?php echo $_SESSION['user_id']; ?>"> -->
                 <input type="number" min="1" name="product_quantity" value="1">
                 <input type="hidden" name="product_image" value="<?php echo $car['image']; ?>">
                 <input type="hidden" name="product_name" value="<?php echo $car['model']; ?>">
