@@ -12,6 +12,8 @@
 
         $result = mysqli_query($conn, $select);
 
+        setcookie('loggedin', 'true', time() + 3600, '/');
+
         if(mysqli_num_rows($result) > 0){
 
             $row = mysqli_fetch_array($result);

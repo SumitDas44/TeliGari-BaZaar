@@ -7,7 +7,7 @@
         header('location:index.php');
     }
     if(isset($_SESSION['admin_name'])){
-        if((time() - $_SESSION['last_time']) > 60){
+        if((time() - $_SESSION['last_time']) > 600){
             header('location:logout.php');
         }else{
             $_SESSION['last_time'] = time();

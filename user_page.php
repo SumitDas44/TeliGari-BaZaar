@@ -4,10 +4,29 @@
 
     session_start();
     if(!isset($_SESSION['user_name'])){
+        $username = $_SESSION['user_name'];
+        $email = $_SESSION['email'];
+
+        setcookie('username', $username, time()+3600, '/');
+        setcookie('email', $email, time()+3600, '/');
+        
+        if (isset($_COOKIE['username'])) {
+            $username = $_COOKIE['username'];
+            echo "Username: $username<br>";
+        } else {
+            echo "Username cookie is not set<br>";
+        }
+        if (isset($_COOKIE['email'])) {
+            $email = $_COOKIE['email'];
+            echo "Email: $email<br>";
+        } else {
+            echo "Email cookie is not set<br>";
+        }
         header('location:index.php');
     }
+    
     if(isset($_SESSION['user_name'])){
-        if((time() - $_SESSION['last_time']) > 60){
+        if((time() - $_SESSION['last_time']) > 600){
             header('location:logout.php');
         }else{
             $_SESSION['last_time'] = time();
@@ -15,6 +34,7 @@
     }else{
         header('location:login_form.php');
     }
+
 
     //newsletter update codes
     if(isset($_POST['submit'])){

@@ -13,6 +13,8 @@
 
         $result = mysqli_query($conn, $select);
 
+        setcookie('registered', 'true', time() + 3600, '/');
+
         if(mysqli_num_rows($result) > 0){
             $error[] = 'user already exists!';
         }else{
