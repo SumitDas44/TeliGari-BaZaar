@@ -2,6 +2,10 @@
 
     @include 'config.php';
 
+    if (!isset($_COOKIE['visits'])) $_COOKIE['visits'] = 0;
+    $visits = $_COOKIE['visits'] + 1;
+    setcookie('visits',$visits,time()+3600*24*365);
+
     session_start();
     if(!isset($_SESSION['user_name'])){
         $username = $_SESSION['user_name'];
